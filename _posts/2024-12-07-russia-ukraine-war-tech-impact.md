@@ -1,7 +1,7 @@
 ---
 layout: mpost
 title: The Ongoing Impact of the Russia-Ukraine War on the Tech Industry in 2025
-date: 2024-12-07 10:28:00 +/-0000
+date: 2024-12-07 11:02:00 +/-0000
 description: "A narrative exploration of how the Russia-Ukraine conflict has reshaped the global tech industry."
 categories: [Technology, Geopolitics]
 tags: [tech, war, russia-ukraine, industry impact]
@@ -21,7 +21,7 @@ This dual shock brought the already stressed global semiconductor supply chain t
 
 Governments and corporations have since taken steps to mitigate these challenges. The U.S. CHIPS Act and Japan's domestic manufacturing initiatives have begun to stabilize production, but the road to recovery remains long.
 
-**Further Reading**: [How Ukraine’s Neon Gas Powers the Tech World](https://www.reuters.com)
+**Further Reading**: [How Ukraine’s Neon Gas Powers the Tech World](https://www.dnb.co.uk/content/dam/english/dnb-solutions/Dun_%26_Bradstreet%20-%20Impact_of_Russia-Ukraine_War_on_Technology_Sector.pdf)
 
 ---
 
@@ -31,7 +31,7 @@ Beyond the physical battlefield, the digital front has been equally intense. The
 
 This surge in cyber threats has reshaped the cybersecurity landscape. Spending on cybersecurity tools and services has skyrocketed, and companies are investing heavily in advanced AI-powered threat detection systems. For IT professionals, the demand for expertise in cybersecurity has never been higher, creating both opportunities and pressures.
 
-**Explore More**: [The Growing Threat of Cyber Warfare](https://www.cybersecurity-insider.com)
+**Explore More**: [The Growing Threat of Cyber Warfare](https://www.iiss.org/globalassets/media-library---content--migration/files/research-papers/2024/01/impact-of-the-russiaukraine-war-on-national-cyber-planning_a-survey-of-ten-countries.pdf)
 
 ---
 
@@ -41,7 +41,7 @@ Amid the chaos, one of the most human aspects of this crisis has been the displa
 
 This exodus has created a bittersweet reality. While host nations have benefited from an influx of skilled professionals, Ukraine’s local tech ecosystem has suffered. Still, the resilience of Ukrainian tech workers is inspiring. Remote work platforms and global collaboration tools have enabled many to continue contributing to projects, keeping their expertise alive and impactful.
 
-**Related Article**: [How Ukrainian Talent is Reshaping Global Tech](https://www.techradar.com)
+**Related Article**: [How Ukrainian Talent is Reshaping Global Tech](https://www.aljazeera.com/economy/2024/2/2/how-ukrainian-tech-founders-operate-during-war)
 
 ---
 
@@ -51,7 +51,7 @@ Wars often accelerate technological advancements, and this conflict is no except
 
 These innovations, while initially developed for defense, are finding applications in civilian life. Autonomous delivery drones, blockchain-based supply chain solutions, and AI-driven analytics tools are just a few examples of how wartime technology is crossing into commercial domains.
 
-**Interesting Read**: [Tech Innovations Born from Conflict](https://www.defense-tech.org)
+**Interesting Read**: [Tech Innovations Born from Conflict](https://www.reuters.com/world/europe/ukraine-sees-use-uncrewed-ground-vehicles-ai-targeting-drones-surging-next-year-2024-12-02/)
 
 ---
 
@@ -61,7 +61,7 @@ Perhaps the most troubling legacy of this conflict is the deepening fragmentatio
 
 This splintering raises difficult questions. Will the internet, once a symbol of global unity, become a collection of isolated networks? And how will this affect innovation and collaboration in the tech sector?
 
-**Explore More**: [The Rise of the Splinternet](https://splintercon.net/2023/08/what-is-the-splinternet/)
+**Explore More**: [The Rise of the Splinternet](https://www.technologyreview.com/2023/04/04/1070352/ukraine-war-russia-tech-industry-yandex-skolkovo/)
 
 ---
 
