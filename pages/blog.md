@@ -4,7 +4,7 @@ title: Blog
 permalink: /blog/
 ---
 
-## Posts
+# Posts
 
 {% for post in site.posts %}
   - 👉 [ {{ post.title }} ]( {{ post.url | relative_url }} )
