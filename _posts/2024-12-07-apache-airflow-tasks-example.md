@@ -134,7 +134,7 @@ email_task = EmailOperator( task_id='send_email', to='recipient@example.com', su
 Add the email_task to a DAG and schedule it after a task completes.
 
 3. Automating Web Scraping
-Below is a task for scraping a website using Python’s requests library.
+Below is a task for scraping a website using Python's requests library.
 
 {% highlight python %}
 from airflow import DAG
