@@ -7,11 +7,11 @@ subtitle: A place to share ideas, thoughts, and most importantly, random sht.
     <header>
       <h1>{{ page.title }}</h1>
       <p>
-        <small>Published on {{ page.date | date: "%B %d, %Y %H:%M:%S" }}</small>
+        <small>Published on {{ page.date | date: "%d %B %Y 🕒 %T" }}</small>
       </p>
       {% if site.data.authors[page.author] %}
       <p>
-        <small>By {{ site.data.authors[page.author].name }} - {{ site.data.authors[page.author].bio }}</small>
+        <small>By <b>{{ site.data.authors[page.author].name }}</b> - <i>{{ site.data.authors[page.author].bio }}</i></small>
       </p>
       {% else %}
       <p>
