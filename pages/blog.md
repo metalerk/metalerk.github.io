@@ -6,6 +6,10 @@ permalink: /blog/
 
 # Posts
 
+<p><a href="javascript:void(0);" onclick="history.back();" style="text-decoration: none; color: #007BFF; font-family: Arial, sans-serif;">
+    ⬅️ Go to Previous Page
+</a></p>
+
 {% for post in site.posts %}
   - 👉 [ {{ post.title }} ]( {{ post.url | relative_url }} )
   <br>
