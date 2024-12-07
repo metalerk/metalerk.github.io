@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: mpost
 title: Python New Features
 date: 2024-12-07 03:03:00 +/-0000
 description: "Exploring the Latest Features in Python: What's New?"
