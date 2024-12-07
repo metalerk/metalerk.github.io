@@ -54,7 +54,7 @@ media_subpath: /assets/img/site/
         <div id="github-profile-info">
             <h2 id="github-profile-name">Luis Esteban Rodriguez</h2>
             <p id="github-profile-username"><a href="http://github.com/metalerk" target="_blank">@metalerk</a></p>
-            <p id="github-profile-bio">Dev, Musician, Dreamer</p>
+            <p id="github-profile-bio">🇲🇽, Dev 💻, Musician 🎧</p>
         </div>
         <div id="github-profile-details">
             <ul>
