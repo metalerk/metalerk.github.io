@@ -22,4 +22,4 @@ permalink: /blog/
 
 ---
 
-&copy; 2024 4MLabs. All rights reserved.
+&copy; 2024 Luis Esteban. All rights reserved.

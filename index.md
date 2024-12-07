@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 4MLabs Home
+title: Randoberto Home
 description: A place to share ideas, thoughts, and most importantly, random sht.
 subtitle: A place to share ideas, thoughts, and most importantly, random sht.
 author: metalerk
@@ -24,7 +24,7 @@ meta_tags:
     content: "A place to share ideas, thoughts, and most importantly, random sht."
 og_tags:
   - property: "og:title"
-    content: "4MLabs"
+    content: "Randoberto"
   - property: "og:description"
     content: "A place to share ideas, thoughts, and most importantly, random sht."
   - property: "og:image"
@@ -37,7 +37,7 @@ twitter_tags:
   - name: "twitter:card"
     content: "summary_large_image"
   - name: "twitter:title"
-    content: content: "4MLabs"
+    content: content: "Randoberto"
   - name: "twitter:description"
     content: "A place to share ideas, thoughts, and most importantly, random sht."
   - name: "twitter:image"
@@ -54,4 +54,4 @@ The random stuff.
 
 ---
 
-&copy; 2024 4MLabs. All rights reserved.
+&copy; 2024 Luis Esteban. All rights reserved.
