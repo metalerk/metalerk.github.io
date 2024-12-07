@@ -61,7 +61,7 @@ media_subpath: /assets/img/site/
             <p><strong>🤷‍♂️</strong> followers · <strong>🤷‍♂️</strong> following</p>
             <ul>
                 <li><span class="icon">🏢</span> <span>Rabobank</span></li>
-                <li><span class="icon">📍</span> <span>Netherlands</span></li>
+                <li><span class="icon">📍</span> <span>Netherlands 🇳🇱</span></li>
                 {% assign current_hour = "now" | date: "%T UTC %z" %}
                 <li><span class="icon">⏰</span> <span>{{ current_hour }}</span></li>
                 <li><span class="icon">📧</span> <a href="mailto:rodriguezjluis0@gmail.com">rodriguezjluis0@gmail.com</a></li>
