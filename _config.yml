@@ -65,6 +65,8 @@ navbar:
     url: /
   - name: Blog
     url: /blog/
+  - name: Tags
+    url: /tags/
 
 
 # Web Analytics Settings

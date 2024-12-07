@@ -1,6 +1,7 @@
 ---
 layout: mpost
 title: "Exploring Consciousness and the Convergence of Psychedelics, Meditation, and Otherworldly Realms"
+description: Exploring Consciousness and the Convergence of Psychedelics, Meditation, and Otherworldly Realms
 author: metalerk
 date: 2024-12-07 05:39:00 +/-0000
 categories:

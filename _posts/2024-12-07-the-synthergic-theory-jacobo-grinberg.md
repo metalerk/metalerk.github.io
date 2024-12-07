@@ -1,6 +1,7 @@
 ---
 layout: mpost
 title: "Jacobo Grinberg, the Syntergic Theory, and the Perception of Reality"
+description: Jacobo Grinberg, the Syntergic Theory, and the Perception of Reality
 author: metalerk
 date: "2024-12-07 06:13:00 +/-0000"
 categories:
