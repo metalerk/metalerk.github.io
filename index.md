@@ -49,6 +49,7 @@ media_subpath: /assets/img/site/
 ---
 
 <section class="custom-section">
+  
 
 
 <div id="github-page-layout">
@@ -156,3 +157,159 @@ media_subpath: /assets/img/site/
 
 
 </section>
+
+
+
+<style>
+    /* Main container */
+    #github-page-layout {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #f6f8fa;
+        color: #24292f;
+    }
+
+    /* Sidebar */
+    #github-sidebar {
+        width: 300px;
+        background-color: #ffffff;
+        border: 1px solid #d0d7de;
+        border-radius: 8px;
+        padding: 20px;
+        margin-right: 20px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    #github-profile-avatar {
+        width: 225px;
+        height: 225px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto 10px;
+        border: 1px solid #e1e4e8;
+    }
+
+    #github-profile-info {
+        text-align: center;
+    }
+
+    #github-profile-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    #github-profile-username {
+        color: #57606a;
+        margin: 5px 0;
+    }
+
+    #github-profile-bio {
+        font-size: 14px;
+        color: #6e7781;
+        margin: 10px 0;
+    }
+
+    #github-profile-details ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    #github-profile-details li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .icon {
+        margin-right: 8px;
+        font-size: 16px;
+    }
+
+    a {
+        color: #0969da;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Main content */
+    #github-main-content {
+        flex-grow: 1;
+        background-color: #ffffff;
+        border: 1px solid #d0d7de;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    #site-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    #site-list li {
+        margin-bottom: 10px;
+    }
+
+    #site-list li a {
+        text-decoration: none;
+        color: #0969da;
+    }
+
+    #site-list li a:hover {
+        text-decoration: underline;
+    }
+
+
+
+    #console-container {
+              background-color: #0d1117;
+              color: #c9d1d9;
+              font-family: "Courier New", Courier, monospace;
+              border: 1px solid #30363d;
+              border-radius: 8px;
+              padding: 20px;
+              width: 600px;
+              margin: 20px auto;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+          }
+      
+          #console-output {
+              white-space: pre-wrap;
+              min-height: 200px;
+              margin-bottom: 10px;
+              background-color: #161b22;
+              padding: 10px;
+              border: 1px solid #30363d;
+              border-radius: 4px;
+              overflow-y: auto;
+              height: 150px;
+          }
+      
+          #console-input {
+              background: none;
+              border: 1px solid #30363d;
+              border-radius: 4px;
+              outline: none;
+              color: #58a6ff;
+              font-family: inherit;
+              font-size: 16px;
+              padding: 5px 10px;
+              width: 100%;
+          }
+      
+          #console-input::placeholder {
+              color: #8b949e;
+          }
+      
+          #console-input:focus {
+              border-color: #58a6ff;
+          }
+
+</style>
