@@ -1,6 +1,6 @@
 ---
 layout: mpost
-title: "Troubleshooting the Most Common Issues in Kubernetes"
+title: Troubleshooting the Most Common Issues in Kubernetes
 date: 2024-12-07 04:53:00 +/-0000
 description: "Troubleshooting the Most Common Issues in Kubernetes"
 categories: [Kubernetes, Troubleshooting]
