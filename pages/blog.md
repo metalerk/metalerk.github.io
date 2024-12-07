@@ -1,10 +1,10 @@
 ---
+layout: default
 title: Blog
-layout: archive
 permalink: /blog/
 ---
 
-# Blog Posts
+# Blog
 
 <ul>
   {% for post in site.posts %}
