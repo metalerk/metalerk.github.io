@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Randoberto Home
+title: Sacred Circuits Home
 description: A place to share ideas, thoughts, and most importantly, random sht.
 subtitle: A place to share ideas, thoughts, and most importantly, random sht.
 author: metalerk
@@ -24,7 +24,7 @@ meta_tags:
     content: "A place to share ideas, thoughts, and most importantly, random sht."
 og_tags:
   - property: "og:title"
-    content: "Randoberto"
+    content: "Sacred Circuits"
   - property: "og:description"
     content: "A place to share ideas, thoughts, and most importantly, random sht."
   - property: "og:image"
@@ -37,7 +37,7 @@ twitter_tags:
   - name: "twitter:card"
     content: "summary_large_image"
   - name: "twitter:title"
-    content: content: "Randoberto"
+    content: content: "Sacred Circuits"
   - name: "twitter:description"
     content: "A place to share ideas, thoughts, and most importantly, random sht."
   - name: "twitter:image"
@@ -101,7 +101,7 @@ media_subpath: /assets/img/site/
         <div id="bashConsole" style="background-color: #1e1e1e; color: #ffffff; font-family: monospace; padding: 20px; border-radius: 8px; width: 80%; max-width: 600px; height: 300px; overflow-y: auto; position: relative;">
           <div id="output"></div>
           <div style="display: flex;">
-              <span style="color: #00ff00;">randoberto@bash:~$  </span>
+              <span style="color: #00ff00;">guest@bash:~$  </span>
               <input id="bashInput" type="text" style="flex: 1; background: none; border: none; outline: none; color: #ffffff; font-family: monospace;" autofocus>
           </div>
       </div>
@@ -136,7 +136,7 @@ media_subpath: /assets/img/site/
                       ? commands[command]() 
                       : `Command not found: ${command}`;
                   
-                  output.innerHTML += `<div><span style="color: #00ff00;">randoberto@bash:~$  </span>${command}</div>`;
+                  output.innerHTML += `<div><span style="color: #00ff00;">guest@bash:~$  </span>${command}</div>`;
                   output.innerHTML += `<div>${response}</div>`;
                   input.value = '';
                   output.scrollTop = output.scrollHeight; // Scroll to bottom

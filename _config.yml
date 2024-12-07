@@ -14,7 +14,7 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Randoberto # the main title
+title: Sacred Circuits # the main title
 
 tagline: Just random stuff # it will display as the subtitle
 
@@ -58,6 +58,9 @@ webmaster_verifications:
 
 # Plugins
 plugins: [jekyll-paginate]
+
+# favicon
+favicon: /assets/img/site/favicon.ico
 
 # Navbar
 navbar:
