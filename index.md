@@ -77,8 +77,6 @@ media_subpath: /assets/img/site/
 
     <!-- Main content (List section) -->
     <div id="github-main-content">
-        <h1>A place to share ideas, thoughts, and most importantly, random sht.</h1>
-
         <h3>Available commands:</h3>
 
         <table border="1" style="border-collapse: collapse; text-align: left; font-family: Arial, sans-serif;">
