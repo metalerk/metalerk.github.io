@@ -56,7 +56,10 @@ webmaster_verifications:
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
-# navbar
+# Plugins
+plugins: [jekyll-paginate]
+
+# Navbar
 navbar:
   - name: Home
     url: /
@@ -156,6 +159,7 @@ pwa:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
 paginate: 10
+paginate_path: "/page:num/"
 
 # The base URL of your site
 baseurl: ""
