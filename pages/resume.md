@@ -1,4 +1,5 @@
 ---
+layout: default
 name: "Luis Esteban Rodriguez"
 title: "Software Engineer"
 location: "Tilburg, Netherlands"
@@ -11,13 +12,16 @@ profile_image: "https://media.licdn.com/dms/image/C4E03AQG2G2G2G2G2G2/profile-di
 permalink: /resume/
 ---
 
+[⬅️ Go to Previous Page](javascript:void(0)){: onclick="history.back();" style="text-decoration: none; color: #007BFF; font-family: Arial, sans-serif;" }
+
 # Luis Esteban Rodriguez
 
 <img src="/assets/img/site/luis.jpg" alt="Profile Picture" width="150" height="150">
 
 **Title**: Software Engineer 💻  
 **Location**: Tilburg, Netherlands 🇳🇱  
-**Email**: [rodriguezjluis0@gmail.com](mailto:rodriguezjluis0@gmail.com) 📫  
+**Email**: [rodriguezjluis0@gmail.com](mailto:rodriguezjluis0@gmail.com)  
+**Github**: [@metalerk](https://github.com/metalerk/)
 
 ### **[⬇️ Download PDF](/assets/docs/site/resume.pdf)**
 

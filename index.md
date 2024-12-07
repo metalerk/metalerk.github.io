@@ -89,6 +89,10 @@ media_subpath: /assets/img/site/
                   <td style="padding: 8px;"><code>blog</code></td>
                   <td style="padding: 8px;">Redirects to <a href="/blog/">Blog Posts</a></td>
               </tr>
+              <tr>
+                  <td style="padding: 8px;"><code>resume</code></td>
+                  <td style="padding: 8px;">Shows <a href="/resume/">Resume</a></td>
+              </tr>
           </tbody>
       </table>
       
@@ -112,11 +116,16 @@ media_subpath: /assets/img/site/
       Available commands:
       - help: Show this help menu
       - blog: Redirect to the blog page
+      - resume: Redirect to the resume page
                   `;
               },
               'blog': () => {
                   window.location.href = '/blog/';
                   return 'Redirecting to /blog/...';
+              },
+              'resume': () => {
+                  window.location.href = '/resume/';
+                  return 'Redirecting to /resume/...';
               },
           };
       
