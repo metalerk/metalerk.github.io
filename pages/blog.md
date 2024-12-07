@@ -23,7 +23,3 @@ permalink: /blog/
   <br>
   Tags: {{ post.tags | join: ", " }}
 {% endfor %}
-
----
-
-&copy; 2024 Luis Esteban. All rights reserved.
