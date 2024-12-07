@@ -107,13 +107,6 @@ Python’s latest updates continue to focus on making the language faster, easie
 
 What are your favorite Python features? Let us know!
 
-*Stay tuned for more updates and keep coding!*
 
-
-<button onclick="window.history.back()" style="border: 2px solid #ccc; background: transparent; color: #333; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; transition: all 0.3s ease; outline: none;"
-    onmouseover="this.style.color='#007BFF'; this.style.borderColor='#007BFF';"
-    onmouseout="this.style.color='#333'; this.style.borderColor='#ccc';">
-    Go Back
-</button>
 
 
