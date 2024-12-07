@@ -13,5 +13,4 @@ permalink: /blog/
       <span>{{ post.date | date: "%B %d, %Y" }}</span>
     </li>
   {% endfor %}
-  
 </ul>
