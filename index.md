@@ -131,7 +131,7 @@ media_subpath: /assets/img/site/
       
           input.addEventListener('keydown', (e) => {
               if (e.key === 'Enter') {
-                  const command = input.value.trim();
+                  const command = input.value.trim().toLowerCase();
                   const response = commands[command] 
                       ? commands[command]() 
                       : `Command not found: ${command}`;
