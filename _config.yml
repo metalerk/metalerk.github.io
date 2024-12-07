@@ -111,8 +111,10 @@ pageviews:
 theme_mode: dark # [light | dark]
 
 markdown: kramdown
-highlighter: pygments
-input: GFM
+highlighter: rouge
+kramdown:
+  syntax_highlighter_opts:
+    line_numbers: false
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
