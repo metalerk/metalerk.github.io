@@ -103,7 +103,7 @@ media_subpath: /assets/img/site/
           </tbody>
       </table>
       
-      <br><br>
+      <br>
 
         <div id="bashConsole" style="background-color: #1e1e1e; color: #ffffff; font-family: monospace; padding: 20px; border-radius: 8px; width: 80%; max-width: 600px; height: 300px; overflow-y: auto; position: relative;">
           <div id="output"></div>
