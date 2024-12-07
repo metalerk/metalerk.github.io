@@ -175,6 +175,19 @@ a:hover {
           border-color: #58a6ff;
       }
 
+      pre, code {
+        max-width: 100%; /* Ensures code blocks don't overflow horizontally */
+        max-height: 300px; /* Set a maximum height for truncation */
+        overflow: auto; /* Enables both horizontal and vertical scrolling */
+        white-space: pre; /* Prevents wrapping of text */
+        word-wrap: normal; /* Ensures words are not broken unnecessarily */
+        /*background-color: #f4f4f4; /* Optional: Background color for readability */
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
 
 
 /* Responsive design for smaller screens */
