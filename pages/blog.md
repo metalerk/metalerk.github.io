@@ -7,11 +7,13 @@ permalink: /blog/
 ## Posts
 
 {% for post in site.posts %}
-  - [ {{ post.title }} ]( {{ post.url | relative_url }} )
+  - 👉 [ {{ post.title }} ]( {{ post.url | relative_url }} )
   <br>
-  {{ post.description }}
+  ***{{ post.description }}***
   <br>
-  {{ post.date | date: "%B %d, %Y %T" }}
+  💻 Author: *{{ post.author }}*
+  <br>
+  {{ post.date | date: "📅 %d %B %Y 🕒 %T" }}
   <br><br>
   Categories: {{ post.categories | join: ", "}}
   <br>
