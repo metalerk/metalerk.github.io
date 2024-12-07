@@ -161,6 +161,8 @@ pwa:
 paginate: 10
 paginate_path: "/page:num/"
 
+future: true
+
 # The base URL of your site
 baseurl: ""
 
