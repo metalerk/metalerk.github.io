@@ -137,14 +137,86 @@ Add the email_task to a DAG and schedule it after a task completes.
 Below is a task for scraping a website using Python’s requests library.
 
 {% highlight python %}
+from airflow import DAG
+from airflow.operators.python_operator import PythonOperator
+from airflow.operators.email_operator import EmailOperator
+from datetime import datetime, timedelta
 import requests
 
-def scrape_website():
-    response = requests.get('https://example.com')
-    with open('/tmp/scraped_data.html', 'w') as f:
-        f.write(response.text)
+# Default arguments for the DAG
+default_args = {
+    'owner': 'airflow',
+    'depends_on_past': False,
+    'email_on_failure': True,
+    'email_on_retry': False,
+    'email': ['your_email@example.com'],
+    'retries': 1,
+    'retry_delay': timedelta(minutes=5),
+}
 
-scrape_task = PythonOperator( task_id='scrape_website', python_callable=scrape_website, dag=dag)
+# Define the DAG
+with DAG(
+    dag_id='automation_example_dag',
+    default_args=default_args,
+    description='An example DAG with ETL, email notifications, and web scraping',
+    schedule_interval='@daily',
+    start_date=datetime(2024, 1, 1),
+    catchup=False,
+) as dag:
+
+    # Task 1: Extract
+    def extract():
+        print("Extracting data...")
+
+    extract_task = PythonOperator(
+        task_id='extract_data',
+        python_callable=extract,
+    )
+
+    # Task 2: Transform
+    def transform():
+        print("Transforming data...")
+
+    transform_task = PythonOperator(
+        task_id='transform_data',
+        python_callable=transform,
+    )
+
+    # Task 3: Load
+    def load():
+        print("Loading data...")
+
+    load_task = PythonOperator(
+        task_id='load_data',
+        python_callable=load,
+    )
+
+    # Task 4: Send Email Notification
+    email_task = EmailOperator(
+        task_id='send_email_notification',
+        to='recipient@example.com',
+        subject='Daily Pipeline Notification',
+        html_content='The daily ETL pipeline completed successfully.',
+    )
+
+    # Task 5: Scrape Website
+    def scrape_website():
+        url = 'https://example.com'
+        response = requests.get(url)
+        with open('/tmp/scraped_data.html', 'w') as file:
+            file.write(response.text)
+        print(f"Scraped data saved to /tmp/scraped_data.html")
+
+    scrape_task = PythonOperator(
+        task_id='scrape_website',
+        python_callable=scrape_website,
+    )
+
+    # Define Task Dependencies
+    extract_task >> transform_task >> load_task
+    load_task >> email_task
+    load_task >> scrape_task
+
 {% endhighlight %}
 
 
