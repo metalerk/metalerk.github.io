@@ -11,11 +11,11 @@ categories:
   - Blockchain
   - Trends
 tags:
-  - Cryptocurrency
-  - Technology
-  - Developers
-  - Blockchain
-  - Trends
+  - cryptocurrency
+  - technology
+  - developers
+  - blockchain
+  - trends
 permalink: /cryptocurrencies-impact-brief/
 ---
 
