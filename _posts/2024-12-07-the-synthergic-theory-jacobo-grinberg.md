@@ -116,8 +116,9 @@ While Grinberg's work is inspiring, it is not without controversy:
 
 ### Online Resources
 - [Jacobo Grinberg: The Missing Scientist](https://www.jacobogrinberg.com)
-- [Scientific American: Consciousness Beyond the Brain](https://www.scientificamerican.com)
-- [Psychedelic Science Research](https://maps.org)
+- [CIA: The Orbitals of Consciousness](https://www.cia.gov/readingroom/docs/CIA-RDP96-00792R000700130001-6.pdf)
+- [Understanding Consciousness Goes Beyond Exploring Brain Chemistry](https://www.scientificamerican.com/article/understanding-consciousness-goes-beyond-exploring-brain-chemistry/)
+
 
 ### Recent Articles
 - "The Psychedelic Renaissance and the Perception of Reality," *Journal of Consciousness Studies*, 2023.
