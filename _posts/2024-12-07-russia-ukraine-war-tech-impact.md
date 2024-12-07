@@ -1,7 +1,7 @@
 ---
 layout: mpost
 title: The Ongoing Impact of the Russia-Ukraine War on the Tech Industry in 2025
-date: 2024-12-07 11:02:00 +/-0000
+date: 2024-12-07 10:28:00 +/-0000
 description: "A narrative exploration of how the Russia-Ukraine conflict has reshaped the global tech industry."
 categories: [Technology, Geopolitics]
 tags: [tech, war, russia-ukraine, industry impact]
@@ -61,7 +61,7 @@ Perhaps the most troubling legacy of this conflict is the deepening fragmentatio
 
 This splintering raises difficult questions. Will the internet, once a symbol of global unity, become a collection of isolated networks? And how will this affect innovation and collaboration in the tech sector?
 
-**Explore More**: [The Rise of the Splinternet](https://www.technologyreview.com/2023/04/04/1070352/ukraine-war-russia-tech-industry-yandex-skolkovo/)
+**Explore More**: [How Russia's War Reshaped Its Tech Industry](https://www.technologyreview.com/2023/04/04/1070352/ukraine-war-russia-tech-industry-yandex-skolkovo/)
 
 ---
 
