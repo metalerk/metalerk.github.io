@@ -178,6 +178,9 @@ collections:
   tabs:
     output: true
     sort_by: order
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
 
 defaults:
   - scope:

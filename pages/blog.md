@@ -6,8 +6,6 @@ permalink: /blog/
 
 # Blog Posts
 
-Welcome! Here you'll find all my posts listed below:
-
 <ul>
   {% for post in site.posts %}
     <li>

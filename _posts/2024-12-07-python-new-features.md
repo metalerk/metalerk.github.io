@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: post
 title: Python New Features
-date: 2024-12-07 03:03:00 +/-TTTT
+date: 2024-12-07 03:03:00 +/-0000
 description: "Exploring the Latest Features in Python: What's New?"
 categories: [Programming, Python]
 tags: [python, features]
