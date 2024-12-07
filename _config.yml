@@ -16,6 +16,10 @@ timezone:
 
 title: Sacred Circuits # the main title
 
+title_image: /assets/img/site/title_img.jpg
+
+thumbnail: /assets/img/site/thumbnail.JPG
+
 tagline: Just random stuff # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
