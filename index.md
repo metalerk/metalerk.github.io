@@ -81,24 +81,15 @@ media_subpath: /assets/img/site/
           <thead style="background-color: #f2f2f2;">
               <tr>
                   <th style="padding: 8px;">Command</th>
-                  <th style="padding: 8px;">Options</th>
                   <th style="padding: 8px;">Description</th>
                   <th style="padding: 8px;">Example</th>
               </tr>
           </thead>
           <tbody>
               <tr>
-                  <td style="padding: 8px;"><code>jump</code></td>
-                  <td style="padding: 8px;">
-
-                    <ul>
-                        <li>blog</li>
-                    </ul>
-
-                  
-                  </td>
-                  <td style="padding: 8px;">Redirects to Blog Posts</td>
-                  <td style="padding: 8px;"><code lang="bash">jump blog</code></td>
+                  <td style="padding: 8px;"><code>blog</code></td>
+                  <td style="padding: 8px;">Redirects to <a href="/blog/">Blog Posts</a></td>
+                  <td style="padding: 8px;"><code lang="bash">blog</code></td>
               </tr>
           </tbody>
       </table>
@@ -122,10 +113,10 @@ media_subpath: /assets/img/site/
                   return `
       Available commands:
       - help: Show this help menu
-      - jump blog: Redirect to the blog page
+      - blog: Redirect to the blog page
                   `;
               },
-              'jump blog': () => {
+              'blog': () => {
                   window.location.href = '/blog/';
                   return 'Redirecting to /blog/...';
               },
