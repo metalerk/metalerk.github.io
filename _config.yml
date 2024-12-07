@@ -111,7 +111,7 @@ pageviews:
 theme_mode: dark # [light | dark]
 
 markdown: kramdown
-highlighter: rouge
+highlighter: pygments
 input: GFM
 
 # The CDN endpoint for media resources.
