@@ -9,8 +9,6 @@ author: metalerk
 permalink: /biggest-universe-mysteries/
 ---
 
-# The Biggest Mysteries in the Universe
-
 The universe is vast, mysterious, and filled with phenomena that challenge our understanding of reality. From the enigmatic nature of black holes to the elusive dark matter, we delve into the mysteries that keep scientists and astronomers up at night.
 
 ---
@@ -19,7 +17,7 @@ The universe is vast, mysterious, and filled with phenomena that challenge our u
 
 Black holes are regions of space where gravity is so strong that nothing, not even light, can escape. These cosmic phenomena continue to baffle scientists with their extreme physics and mysterious behavior.
 
-![Black Hole](https://upload.wikimedia.org/wikipedia/commons/5/56/Black_hole_-_Messier_87.png)
+![Black Hole](https://science.nasa.gov/wp-content/uploads/2020/10/sub-warped-gaia-000000-14x5-1.webp?w=320&format=png%20320w,%20https://science.nasa.gov/wp-content/uploads/2020/10/sub-warped-gaia-000000-14x5-1.webp?w=640&format=png%20640w,%20https://science.nasa.gov/wp-content/uploads/2020/10/sub-warped-gaia-000000-14x5-1.webp?w=768&format=png%20768w,%20https://science.nasa.gov/wp-content/uploads/2020/10/sub-warped-gaia-000000-14x5-1.webp?w=1024&format=png%201024w,%20https://science.nasa.gov/wp-content/uploads/2020/10/sub-warped-gaia-000000-14x5-1.webp?w=1280&format=png%201280w,%20https://science.nasa.gov/wp-content/uploads/2020/10/sub-warped-gaia-000000-14x5-1.webp?w=1536&format=png%201536w,%20https://science.nasa.gov/wp-content/uploads/2020/10/sub-warped-gaia-000000-14x5-1.webp?w=2048&format=png%202048w,%20https://science.nasa.gov/wp-content/uploads/2020/10/sub-warped-gaia-000000-14x5-1.webp?w=2560&format=png%202560w,%20https://science.nasa.gov/wp-content/uploads/2020/10/sub-warped-gaia-000000-14x5-1.webp?w=3072&format=png%203072w,%20https://science.nasa.gov/wp-content/uploads/2020/10/sub-warped-gaia-000000-14x5-1.webp?w=4096&format=png%204096w)
 
 ### Key Questions:
 - What happens inside a black hole?
@@ -33,7 +31,7 @@ Black holes are regions of space where gravity is so strong that nothing, not ev
 
 Scientists estimate that over 95% of the universe is made up of dark matter and dark energy, yet these remain undetected. Dark matter holds galaxies together, while dark energy drives the expansion of the universe.
 
-![Dark Matter Simulation](https://upload.wikimedia.org/wikipedia/commons/3/3c/Dark_Matter_Distribution.jpg)
+![Dark Matter Simulation](https://home.cern/sites/default/files/2023-09/higgs%20product%20%280%3B00%3B28%3B06%29.jpeg){: width="320px"}
 
 ### Key Mysteries:
 - What is dark matter made of?
@@ -47,8 +45,6 @@ Scientists estimate that over 95% of the universe is made up of dark matter and 
 
 The Big Bang theory explains the universe's beginning, but questions remain about what existed before and what triggered the event.
 
-![Big Bang Representation](https://upload.wikimedia.org/wikipedia/commons/4/4e/Planck_CMB.png)
-
 ### Fascinating Questions:
 - What caused the Big Bang?
 - Is there evidence of a multiverse?
@@ -60,8 +56,6 @@ The Big Bang theory explains the universe's beginning, but questions remain abou
 ## 4. Extraterrestrial Life: Are We Alone?
 
 The search for extraterrestrial life is one of humanity's most profound endeavors. With the discovery of exoplanets, the possibility of alien civilizations has become more tangible.
-
-![Exoplanet Illustration](https://upload.wikimedia.org/wikipedia/commons/e/e7/Kepler-186f_PIA18905.jpg)
 
 ### Unanswered Questions:
 - Are there habitable exoplanets?
@@ -76,8 +70,6 @@ The search for extraterrestrial life is one of humanity's most profound endeavor
 ## 5. The Fate of the Universe
 
 How will the universe end? Theories range from the "Big Freeze," where the universe cools to a halt, to the "Big Crunch," where it collapses back on itself.
-
-![Fate of the Universe](https://upload.wikimedia.org/wikipedia/commons/d/d6/Future_universe.jpg)
 
 ### Theories:
 - Will the universe expand forever?
