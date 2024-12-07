@@ -1,0 +1,30 @@
+<footer class="site-footer">
+    <p>
+      &copy; {{ site.time | date: "%Y" }} 
+      <a href="{{ "/" | relative_url }}">{{ site.title }}</a>. 
+      All rights reserved.
+    </p>
+  
+    <!-- Optional Navigation Links -->
+    {% if site.nav %}
+      <nav class="footer-nav">
+        <ul>
+          {% for item in site.nav %}
+            <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+  
+    <!-- Social Media Links -->
+    {% if site.social %}
+      <div class="footer-social">
+        {% for platform in site.social %}
+          <a href="{{ platform.url }}" target="_blank" rel="noopener">
+            {{ platform.title }}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </footer>
+  

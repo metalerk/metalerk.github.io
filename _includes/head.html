@@ -1,0 +1,45 @@
+<head>
+    <!-- Character Encoding -->
+    <meta charset="utf-8">
+    
+    <!-- Viewport for Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    
+    <!-- Description -->
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  
+    <!-- Favicon -->
+    {% if site.favicon %}
+      <link rel="icon" href="{{ site.favicon | relative_url }}">
+    {% endif %}
+  
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="{% if page.thumbnail %}{{ page.thumbnail | relative_url }}{% elsif site.thumbnail %}{{ site.thumbnail | relative_url }}{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="website">
+  
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{% if page.thumbnail %}{{ page.thumbnail | relative_url }}{% elsif site.thumbnail %}{{ site.thumbnail | relative_url }}{% endif %}">
+  
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  
+    <!-- Optional Additional Metadata -->
+    {% if site.additional_meta %}
+      {{ site.additional_meta }}
+    {% endif %}
+  
+    <!-- Optional Scripts -->
+    {% if site.head_scripts %}
+      {{ site.head_scripts }}
+    {% endif %}
+  </head>
+  

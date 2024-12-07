@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 title: Sacred Circuits Home
 description: A place to share ideas, thoughts, and most importantly, random sht.
 subtitle: A place to share ideas, thoughts, and most importantly, random sht.

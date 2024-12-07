@@ -1,0 +1,29 @@
+<header class="site-header">
+    <!-- Title as Image or Text -->
+    {% if site.title_image %}
+      <a href="{{ "/" | relative_url }}">
+        <img src="{{ site.title_image | relative_url }}" alt="{{ site.title }}" class="site-title-image">
+      </a>
+    {% else %}
+      <h1 class="site-title">
+        <a href="{{ "/" | relative_url }}">{{ site.title }}</a>
+      </h1>
+    {% endif %}
+  
+    <!-- Optional Site Description -->
+    {% if site.description %}
+      <p class="site-description">{{ site.description }}</p>
+    {% endif %}
+  
+    <!-- Navigation Menu -->
+    {% if site.nav %}
+      <nav class="site-nav">
+        <ul>
+          {% for item in site.nav %}
+            <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+  </header>
+  

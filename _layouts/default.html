@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <header class="site-header">
+      {% if site.title_image %}
+        <!-- Mostrar imagen como título si está configurada -->
+        <a href="{{ "/" | relative_url }}">
+          <img src="{{ site.title_image | relative_url }}" alt="{{ site.title }}">
+        </a>
+      {% else %}
+        <!-- Fallback: mantener el diseño original del tema -->
+        {% include header.html %}
+      {% endif %}
+    </header>
+
+    <main class="site-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      {% include footer.html %}
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+.site-header img {
+    max-width: 20%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .site-header h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  
+  .site-content {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .site-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
