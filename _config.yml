@@ -109,6 +109,7 @@ pageviews:
 #     dark — Use the dark color scheme
 #
 theme_mode: dark # [light | dark]
+
 markdown: kramdown
 highlighter: rouge
 

@@ -18,30 +18,30 @@ Docker has become an essential tool in modern software development, but users of
 ### Scenario
 A developer pulls an official MySQL image and tries to start a container using the following command:
 
-```bash
+{% highlight bash %}
 docker run --name mydb -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
-```
+{% endhighlight %}
 
 However, the container keeps restarting.
 
 ### Troubleshooting Steps
 1. **Inspect Logs**:
-   ```bash
+   {% highlight bash %}
    docker logs mydb
-   ```
+   {% endhighlight %}
    Example output:
-   ```
+   {% highlight bash %}
    [ERROR] --initialize specified but the data directory has files in it.
-   ```
+   {% endhighlight %}
 
 2. **Identify the Problem**:
    - The issue occurs because a volume is mapped to the container's data directory (`/var/lib/mysql`), and it already contains files incompatible with MySQL initialization.
 
 3. **Solution**:
    - Remove the existing volume or ensure it's compatible:
-     ```bash
+     {% highlight bash %}
      docker volume rm <volume_name>
-     ```
+     {% endhighlight %}
 
 **Useful Read**: [MySQL Docker Troubleshooting](https://hub.docker.com/_/mysql)
 
@@ -54,21 +54,21 @@ A team notices the server running Docker is running out of disk space. Upon inve
 
 ### Troubleshooting Steps
 1. **Inspect Disk Usage**:
-   ```bash
+   {% highlight bash %}
    docker system df
-   ```
+   {% endhighlight %}
    Example output:
-   ```
+   {% highlight bash %}
    TYPE                TOTAL               ACTIVE              SIZE
    Images              15                  5                  5.6GB
    Containers          10                  2                  1.3GB
-   ```
+   {% endhighlight %}
 
 2. **Remove Unused Resources**:
    - Prune unused images, containers, and volumes:
-     ```bash
+     {% highlight bash %}
      docker system prune -a
-     ```
+     {% endhighlight %}
 
 3. **Automate Cleanup**:
    - Add a cron job to periodically clean up unused resources.
@@ -82,30 +82,30 @@ A team notices the server running Docker is running out of disk space. Upon inve
 ### Scenario
 A developer runs a container, but it cannot reach external websites or APIs.
 
-```bash
+{% highlight bash %}
 docker run --name webapp -d mywebapp:latest
-```
+{% endhighlight %}
 
 The container's application throws DNS resolution errors.
 
 ### Troubleshooting Steps
 1. **Test Connectivity**:
    - Exec into the container and check network access:
-     ```bash
+     {% highlight bash %}
      docker exec -it webapp ping google.com
-     ```
+     {% endhighlight %}
 
 2. **Check Docker DNS Configuration**:
    - Inspect the Docker network configuration:
-     ```bash
+     {% highlight bash %}
      docker network inspect bridge
-     ```
+     {% endhighlight %}
 
 3. **Fix DNS Issues**:
    - Manually specify DNS servers when starting the container:
-     ```bash
+     {% highlight bash %}
      docker run --name webapp --dns 8.8.8.8 -d mywebapp:latest
-     ```
+     {% endhighlight %}
 
 **Useful Link**: [Docker Networking Issues](https://docs.docker.com/network/)
 
@@ -119,19 +119,19 @@ A team experiences long build times when building a large application with a Doc
 ### Troubleshooting Steps
 1. **Analyze Build Logs**:
    - Use the `--progress=plain` flag to understand which step takes the most time:
-     ```bash
+     {% highlight bash %}
      docker build --progress=plain -t myapp .
-     ```
+     {% endhighlight %}
 
 2. **Optimize Dockerfile**:
    - Reorder steps to cache layers effectively:
-     ```dockerfile
+     {% highlight dockerfile %}
      FROM python:3.9-slim
      COPY requirements.txt /app/
      RUN pip install -r /app/requirements.txt
      COPY . /app/
      CMD ["python", "app.py"]
-     ```
+     {% endhighlight %}
 
 3. **Use Multistage Builds**:
    - Reduce image size by separating build and runtime dependencies.
@@ -145,32 +145,32 @@ A team experiences long build times when building a large application with a Doc
 ### Scenario
 A developer tries to run an NGINX container on port 80:
 
-```bash
+{% highlight bash %}
 docker run -p 80:80 nginx
-```
+{% endhighlight %}
 
 The command fails with the error:
-```
+{% highlight bash %}
 Error starting userland proxy: listen tcp 0.0.0.0:80: bind: address already in use
-```
+{% endhighlight %}
 
 ### Troubleshooting Steps
 1. **Check Active Processes**:
    - Identify which process is using the port:
-     ```bash
+     {% highlight bash %}
      sudo netstat -tuln | grep 80
-     ```
+     {% endhighlight %}
 
 2. **Kill the Process**:
-   ```bash
+   {% highlight bash %}
    sudo kill <pid>
-   ```
+   {% endhighlight %}
 
 3. **Run the Container on a Different Port**:
    - Use a non-conflicting port:
-     ```bash
+     {% highlight bash %}
      docker run -p 8080:80 nginx
-     ```
+     {% endhighlight %}
 
 **Useful Read**: [Docker Port Binding](https://docs.docker.com/config/containers/container-networking/)
 
