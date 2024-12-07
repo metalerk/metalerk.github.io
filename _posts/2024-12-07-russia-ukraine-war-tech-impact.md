@@ -61,7 +61,7 @@ Perhaps the most troubling legacy of this conflict is the deepening fragmentatio
 
 This splintering raises difficult questions. Will the internet, once a symbol of global unity, become a collection of isolated networks? And how will this affect innovation and collaboration in the tech sector?
 
-**Explore More**: [The Rise of the Splinternet](https://www.techgeopolitics.com)
+**Explore More**: [The Rise of the Splinternet](https://splintercon.net/2023/08/what-is-the-splinternet/)
 
 ---
 
@@ -70,16 +70,6 @@ This splintering raises difficult questions. Will the internet, once a symbol of
 The Russia-Ukraine war has left an indelible mark on the tech industry. It has exposed vulnerabilities in supply chains, accelerated innovation, and highlighted the human cost of conflict. Yet, amid the challenges, it has also showcased resilience, adaptability, and the unyielding drive for progress.
 
 As we look to the future, the lessons from this crisis will undoubtedly shape the next chapter of the tech industry. Whether through new technologies, reimagined strategies, or strengthened international collaboration, the global tech community will continue to navigate this complex and ever-changing landscape.
-
-**Bibliography**:
-1. Reuters. (2024). [Ukraine’s Neon Gas and the Semiconductor Industry](https://www.reuters.com)
-2. Cybersecurity Insider. (2024). [Cyber Warfare in the Digital Age](https://www.cybersecurity-insider.com)
-3. TechRadar. (2024). [Ukraine’s Tech Talent Diaspora](https://www.techradar.com)
-4. Defense Tech. (2024). [Technology Born from Conflict](https://www.defense-tech.org)
-
-**Explore More**:
-- [Impact of Cybersecurity on the Global Economy](https://www.cybersecurity-insider.com)
-- [The Future of Tech in a Divided World](https://www.techgeopolitics.com)
 
 ---
 
