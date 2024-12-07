@@ -14,6 +14,7 @@ tags:
   - psychedelics
   - otherworldly beings
   - jacobo grinberg
+permalink: /exploring-consciousness-psychedelics-otherworldly-realms/
 ---
 
 # Exploring Consciousness and the Convergence of Psychedelics, Meditation, and Otherworldly Realms

@@ -6,6 +6,7 @@ description: "Troubleshooting the Most Common Issues in Kubernetes"
 categories: [Kubernetes, Troubleshooting]
 tags: [kubernetes, troubleshooting, devops]
 author: metalerk
+permalink: /troubleshooting-common-issues-kubernetes/
 ---
 
 # Troubleshooting the Most Common Issues in Kubernetes

@@ -6,6 +6,7 @@ description: "Exploring the Latest Features in Python: What's New?"
 categories: [Programming, Python]
 tags: [python, features]
 author: metalerk
+permalink: /python-new-features/
 ---
 
 # Exploring the Latest Features in Python: What's New?
