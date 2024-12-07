@@ -57,10 +57,10 @@ A team notices the server running Docker is running out of disk space. Upon inve
 
    Example output:
    
-   ```bash
-   TYPE                TOTAL               ACTIVE              SIZE
-   Images              15                  5                  5.6GB
-   Containers          10                  2                  1.3GB
+   ```
+   TYPE          TOTAL     ACTIVE      SIZE
+   Images        15        5          5.6GB
+   Containers    10        2          1.3GB
    ```
 
 2. **Remove Unused Resources**:
