@@ -53,14 +53,14 @@ media_subpath: /assets/img/site/
     <div id="github-sidebar">
         <img id="github-profile-avatar" src="assets/img/site/luis.jpg" alt="User Avatar">
         <div id="github-profile-info">
-            <h2 id="github-profile-name">Luis Esteban</h2>
+            <h2 id="github-profile-name">Luis Esteban Rodriguez</h2>
             <p id="github-profile-username"><a href="http://github.com/metalerk" target="_blank">@metalerk</a></p>
             <p id="github-profile-bio">Dev, Musician, Dreamer</p>
         </div>
         <div id="github-profile-details">
             <p><strong>🤷‍♂️</strong> followers · <strong>🤷‍♂️</strong> following</p>
             <ul>
-                <li><span class="icon">🏢</span> <span>Unemployed B.V.</span></li>
+                <li><span class="icon">🏢</span> <span>Rabobank</span></li>
                 <li><span class="icon">📍</span> <span>Netherlands</span></li>
                 {% assign current_hour = "now" | date: "%T UTC %z" %}
                 <li><span class="icon">⏰</span> <span>{{ current_hour }}</span></li>
