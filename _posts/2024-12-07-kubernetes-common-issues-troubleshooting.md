@@ -111,17 +111,18 @@ A Kubernetes service is not reachable from outside the cluster.
 ### Solution:
 1. Verify the service configuration:
     ```bash
-    kubectl describe service <service-name>
+kubectl describe service <service-name>
     ```
 
 2. Check the endpoints:
     ```bash
-    kubectl get endpoints <service-name>
+kubectl get endpoints <service-name>
     ```
 
 3. Debug network connectivity:
     ```bash
-    kubectl exec -it <pod-name> -- curl <service-name>:<port>
+kubectl exec -it <pod-name>\
+-- curl <service-name>:<port>
     ```
 
 ---
