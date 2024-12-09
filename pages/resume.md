@@ -23,6 +23,7 @@ permalink: /resume/
 **Email**: [rodriguezjluis0@gmail.com](mailto:rodriguezjluis0@gmail.com)  
 **Github**: [@metalerk](https://github.com/metalerk/)
 
+### **[⬇️ Download WORD](/assets/docs/site/resume_word.docx)**
 ### **[⬇️ Download PDF](/assets/docs/site/resume.pdf)**
 
 ## Skills
