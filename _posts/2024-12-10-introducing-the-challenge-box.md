@@ -11,7 +11,7 @@ permalink: /introducing-the-challenge-box/
 
 ![the challenge box logo](https://github.com/metalerk/the-challenge-box/raw/main/_assets/the_challenge_box_logo.jpg){: width="100%"}
 
-I am thrilled to announce my latest project: [The Challenge Box](https://github.com/metalerk/the-challenge-box), a GitHub repository dedicated to showcasing problem-solving approaches and solution examples. This project reflects my passion for tackling challenges systematically and sharing knowledge with the developer community.
+I am thrilled to announce my latest project: [The Challenge Box](https://github.com/metalerk/the-challenge-box){: target="_blank"}, a GitHub repository dedicated to showcasing problem-solving approaches and solution examples. This project reflects my passion for tackling challenges systematically and sharing knowledge with the developer community.
 
 ## What is The Challenge Box?
 
@@ -45,7 +45,7 @@ Whether you're a beginner or an experienced developer, you'll find something val
 
 ## How to Get Started
 
-1. Visit the repository: [The Challenge Box on GitHub](https://github.com/metalerk/the-challenge-box).
+1. Visit the repository: [The Challenge Box on GitHub](https://github.com/metalerk/the-challenge-box){: target="_blank"}.
 2. Browse the available challenges and solutions.
 3. Clone the repository and experiment with the examples.
 
