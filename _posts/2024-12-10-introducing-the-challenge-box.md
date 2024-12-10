@@ -9,7 +9,7 @@ author: metalerk
 permalink: /introducing-the-challenge-box/
 ---
 
-![the challenge box logo](https://github.com/metalerk/the-challenge-box/raw/main/_assets/the_challenge_box_logo.jpg){: width="20%"}
+![the challenge box logo](https://github.com/metalerk/the-challenge-box/raw/main/_assets/the_challenge_box_logo.jpg){: width="80%"}
 
 I am thrilled to announce my latest project: [The Challenge Box](https://github.com/metalerk/the-challenge-box), a GitHub repository dedicated to showcasing problem-solving approaches and solution examples. This project reflects my passion for tackling challenges systematically and sharing knowledge with the developer community.
 
