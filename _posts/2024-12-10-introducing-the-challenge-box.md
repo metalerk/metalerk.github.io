@@ -55,5 +55,4 @@ I welcome feedback, suggestions, and contributions to the project. If you're int
 
 I'm excited to share this journey with you and look forward to your thoughts on The Challenge Box. Let's tackle some challenges together!
 
-Happy coding!  
-**metalerk**
+Happy coding!
