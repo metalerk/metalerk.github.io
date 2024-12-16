@@ -1,11 +1,11 @@
 ---
 layout: mpost
-title: {{ page.title }}
-date: {{ page.date }}
-description: {{ page.description }}
-categories: {{ page.categories }}
-tags: {{ page.tags }}
-author: {{ page.author }}
+title: 
+date: "YYYY-MM-DD HH:MM:SS +0000"
+description: 
+categories: 
+tags: []
+author: []
 # permalink: {{ page.permalink }}
 ---
 
