@@ -48,6 +48,10 @@ sitemap:
 media_subpath: /assets/img/site/
 ---
 
+<blockquote class="prompt-info">
+                  <p>Currently under development <code class="language-plaintext highlighter-rouge"></code></p>
+                </blockquote>
+
 <section id="github-page-layout">
     <aside id="github-sidebar">
         <img id="github-profile-avatar" src="assets/img/site/luis.jpg" alt="User Avatar">
