@@ -1,7 +1,7 @@
 # The Site Configuration
 
 # Import the theme
-remote_theme: cotes2020/jekyll-theme-chirpy/
+# remote_theme: cotes2020/jekyll-theme-chirpy/
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
@@ -117,9 +117,17 @@ theme_mode: dark # [light | dark]
 
 markdown: kramdown
 highlighter: rouge
+
 kramdown:
+  input: GFM
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
+    css_class: highlight
     line_numbers: false
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url

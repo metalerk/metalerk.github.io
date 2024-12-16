@@ -2,15 +2,14 @@
 
 source "https://rubygems.org"
 
-ruby "3.3.4"
+ruby "~> 3.3.4"
 
+gem "kramdown", "~> 2.4.0"
+gem "kramdown-parser-gfm", "~> 1.1.0"
 gem "jekyll", "~> 3.10.0"
 gem "jekyll-remote-theme", "~> 0.4.3"
 gem "jekyll-paginate", "~> 1.1.0"
 gem "jekyll-seo-tag", "~> 2.8.0"
-
-gem "jekyll-theme-chirpy"
-
 gem "html-proofer", "~> 5.0", group: :test
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
