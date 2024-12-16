@@ -61,7 +61,7 @@ webmaster_verifications:
 # The end of `jekyll-seo-tag` settings
 
 # Plugins
-plugins: [jekyll-paginate, jekyll-remote-include]
+plugins: [jekyll-paginate]
 
 # favicon
 favicon: /assets/img/site/favicon.ico
