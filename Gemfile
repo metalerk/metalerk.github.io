@@ -2,12 +2,12 @@
 
 source "https://rubygems.org"
 
-ruby "3.3.6"
+ruby "3.3.4"
 
-gem "jekyll"
-gem "jekyll-remote-theme"
-gem "jekyll-paginate"
-gem "jekyll-seo-tag"
+gem "jekyll", "~> 3.10.0"
+gem "jekyll-remote-theme", "~> 0.4.3"
+gem "jekyll-paginate", "~> 1.1.0"
+gem "jekyll-seo-tag", "~> 2.8.0"
 
 gem "jekyll-theme-chirpy"
 
