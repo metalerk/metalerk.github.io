@@ -2,6 +2,32 @@
 <html lang="en">
   <head>
     {% include head.html %}
+
+    <style>
+      /* Hide menu on smaller screens */
+      .ui.menu {
+        display: none;
+      }
+  
+      /* Show hamburger icon on smaller screens */
+      .hamburger {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+  
+      /* Adjust visibility */
+      @media screen and (min-width: 768px) {
+        .ui.menu {
+          display: flex;
+        }
+  
+        .hamburger {
+          display: none;
+        }
+      }
+    </style>
+
   </head>
   <body>
     <header class="site-header">
@@ -17,11 +43,49 @@
     </header>
 
     <main class="site-content">
+      <div class="ui inverted segment container">
+        <!-- Hamburger Icon -->
+        <div class="hamburger">
+          <i class="bars icon large"></i>
+          <span></span>
+        </div>
+        <div class="ui inverted primary menu navbar-menu-item centered grid">
+
+            <div class="five wide column menu-item">
+              <a class="item centered" href="/">
+                <span class="centered">Home</span>
+              </a>
+            </div>
+            <div class="five wide column menu-item">
+              <a class="item" href="/blog/">
+                Blog
+              </a>
+            </div>
+            <div class="five wide column menu-item">
+              <a class="item" href="/resume/">
+                Resume
+              </a>
+            </div>
+
+        </div>
+      </div>
+      <br>
       {{ content }}
     </main>
 
     <footer class="site-footer">
       {% include footer.html %}
     </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Toggle menu visibility on hamburger click
+        $('.hamburger').on('click', function () {
+          $('.ui.menu').slideToggle();
+        });
+      });
+    </script>
   </body>
 </html>

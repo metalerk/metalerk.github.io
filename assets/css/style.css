@@ -1,9 +1,18 @@
+.ui.segment {
+    padding: 0%;
+}
+
+.navbar-menu-item a {
+    font-size: large;
+    padding: 0px;
+}
+
 .site-header img {
     max-width: 40%;
     height: auto;
     display: block;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 10px;
   }
   
   .site-header h1 {
@@ -237,3 +246,33 @@ a:hover {
         font-size: 14px;
     }
 }
+
+/* Hide menu on smaller screens */
+.ui.menu {
+    display: none;
+  }
+
+  /* Show hamburger icon on smaller screens */
+  .hamburger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .navbar-menu-item a {
+    font-size: medium;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+  /* Adjust visibility */
+  @media screen and (min-width: 768px) {
+    .ui.menu {
+      display: flex;
+    }
+
+    .hamburger {
+      display: none;
+    }
+    
+  }
