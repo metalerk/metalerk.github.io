@@ -13,4 +13,3 @@ This is a brief overview on Repeated String challenge taken from [Hackerrank](ht
 
 ---
 
-{% remote_include https://raw.githubusercontent.com/metalerk/the-challenge-box/refs/heads/main/OtherChallenges/Destination_City/Destination_city.md %}
