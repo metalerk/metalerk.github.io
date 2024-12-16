@@ -25,19 +25,22 @@ A pod is stuck in the `Pending` state and does not progress to `Running`.
 
 ### Solution:
 1. Check the pod's events for more information:
-    ```bash
-    kubectl describe pod <pod-name>
-    ```
+    
+    <pre><code class="language-bash">
+    kubectl describe pod &lt;pod-name&gt;
+    </code></pre>
 
 2. Verify cluster resources:
-    ```bash
+    
+    <pre><code class="language-bash">
     kubectl get nodes -o wide
-    ```
+    </code></pre>
 
 3. Ensure the PVC is bound (if used):
-    ```bash
+    
+    <pre><code class="language-bash">
     kubectl get pvc
-    ```
+    </code></pre>
 
 ---
 
@@ -53,20 +56,17 @@ A pod is continuously restarting due to the `CrashLoopBackOff` error.
 
 ### Solution:
 1. Inspect the pod logs:
-    ```bash
-    kubectl logs <pod-name>
-    ```
-
+    <pre><code class="language-bash">
+    kubectl logs &lt;pod-name&gt;
+    </code></pre>
 2. Check the pod's events:
-    ```bash
-    kubectl describe pod <pod-name>
-    ```
-
+    <pre><code class="language-bash">
+    kubectl describe pod &lt;pod-name&gt;
+    </code></pre>
 3. Debug interactively:
-    ```bash
-    kubectl exec -it <pod-name> -- /bin/bash
-    ```
-
+    <pre><code class="language-bash">
+    kubectl exec -it &lt;pod-name&gt; -- /bin/bash
+    </code></pre>
 ---
 
 ## 3. **ImagePullBackOff**
@@ -81,20 +81,23 @@ A pod fails to start because Kubernetes cannot pull the container image.
 
 ### Solution:
 1. Verify the image name and tag:
-    ```bash
-    kubectl describe pod <pod-name>
-    ```
+    
+    <pre><code class="language-bash">
+    kubectl describe pod &lt;pod-name&gt;
+    </code></pre>
 
 2. Check the image registry URL and credentials:
+
     ```yaml
     imagePullSecrets:
       - name: <secret-name>
     ```
 
 3. Test connectivity to the registry:
-    ```bash
-    curl -v <registry-url>
-    ```
+
+    <pre><code class="language-bash">
+    curl -v &lt;registry-url&gt;
+    </code></pre>
 
 ---
 
@@ -110,21 +113,19 @@ A Kubernetes service is not reachable from outside the cluster.
 
 ### Solution:
 1. Verify the service configuration:
-    ```bash
-kubectl describe service <service-name>
-    ```
-
+    <pre><code class="language-bash">
+kubectl describe service &lt;service-name&gt;
+    </code></pre>
 2. Check the endpoints:
-    ```bash
-kubectl get endpoints <service-name>
-    ```
-
+    <pre><code class="language-bash">
+kubectl get endpoints &lt;service-name&gt;
+    </code></pre>
 3. Debug network connectivity:
-    ```bash
-kubectl exec -it <pod-name>\
--- curl <service-name>:<port>
-    ```
-
+    <pre><code class="language-bash">
+kubectl exec -it &lt;pod-name&gt;\
+-- curl &lt;service-name&gt;:<port&gt;
+    
+    </code></pre>
 ---
 
 ## 5. **Node Not Ready**
@@ -139,20 +140,17 @@ One or more nodes are marked as `NotReady`.
 
 ### Solution:
 1. Check the node's status:
-    ```bash
-    kubectl describe node <node-name>
-    ```
-
+    <pre><code class="language-bash">
+    kubectl describe node &lt;node-name&gt;
+    </code></pre>
 2. SSH into the node and check the kubelet logs:
-    ```bash
+    <pre><code class="language-bash">
     journalctl -u kubelet -f
-    ```
-
+    </code></pre>
 3. Restart the kubelet if needed:
-    ```bash
+    <pre><code class="language-bash">
     systemctl restart kubelet
-    ```
-
+    </code></pre>
 ---
 
 ## Conclusion

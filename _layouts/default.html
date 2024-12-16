@@ -8,7 +8,7 @@
       {% if site.title_image %}
         <!-- Mostrar imagen como título si está configurada -->
         <a href="{{ "/" | relative_url }}">
-          <img src="{{ site.title_image | relative_url }}" alt="{{ site.title }}">
+          <img src="{{ site.title_image | relative_url }}" class="ui centered huge image header-img" alt="{{ site.title }}">
         </a>
       {% else %}
         <!-- Fallback: mantener el diseño original del tema -->

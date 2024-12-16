@@ -46,7 +46,7 @@ Set up the Airflow database:
 
 Create a user account:
 
-{% highlight bash %}
+<pre><code class="language-bash">
 airflow users create \
   --username admin \
   --password admin \
@@ -54,14 +54,14 @@ airflow users create \
   --lastname Last \
   --role Admin \
   --email admin@example.com
-{% endhighlight %}
+</code></pre>
 
 Start the Airflow webserver and scheduler:
 
-{% highlight bash %}
+<pre><code class="language-bash">
 airflow webserver -p 8080 &
 airflow scheduler &
-{% endhighlight %}
+</code></pre>
 
 Visit [127.0.0.1:8080](http://localhost:8080){: target="__blank"} to access the Airflow web UI.
 
@@ -72,7 +72,7 @@ Apache Airflow uses DAGs (Directed Acyclic Graphs) to define workflows. DAGs con
 ### Creating a DAG
 Below is an example of a simple DAG that prints a message.
 
-{% highlight python %}
+<pre><code class="language-python">
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from datetime import datetime
@@ -85,7 +85,7 @@ def print_hello():
 
 with DAG( 'hello_world_dag', default_args=default_args, description='A simple hello world DAG', schedule_interval='@daily', ) as dag:
     hello_task = PythonOperator( task_id='print_hello', python_callable=print_hello, )
-{% endhighlight %}
+</code></pre>
 
 Save this file as `hello_world_dag.py` in the `dags/` folder of your Airflow home directory.
 
@@ -94,7 +94,7 @@ Save this file as `hello_world_dag.py` in the `dags/` folder of your Airflow hom
 1. Daily ETL Pipeline
 The following example demonstrates automating an ETL pipeline.
 
-{% highlight python %}
+<pre><code class="language-python">
 from airflow import DAG
 from airflow.operators.python_operator
 
@@ -119,24 +119,24 @@ with DAG(
 
 # Define dependencies
 extract_task >> transform_task >> load_task
-{% endhighlight %}
+</code></pre>
 
 2. Sending Email Notifications
 Use the `EmailOperator`` to automate email sending.
 
-{% highlight python %}
+<pre><code class="language-python">
 from airflow.operators.email_operator
 import EmailOperator
 
 email_task = EmailOperator( task_id='send_email', to='recipient@example.com', subject='Daily Report', html_content='The daily pipeline completed successfully.', dag=dag)
-{% endhighlight %}
+</code></pre>
 
 Add the email_task to a DAG and schedule it after a task completes.
 
 3. Automating Web Scraping
 Below is a task for scraping a website using Python's requests library.
 
-{% highlight python %}
+<pre><code class="language-python">
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.email_operator import EmailOperator
@@ -217,7 +217,7 @@ with DAG(
     load_task >> email_task
     load_task >> scrape_task
 
-{% endhighlight %}
+</code></pre>
 
 
 # Conclusion

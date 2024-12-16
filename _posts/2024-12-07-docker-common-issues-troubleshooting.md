@@ -57,12 +57,11 @@ A team notices the server running Docker is running out of disk space. Upon inve
 
    Example output:
    
-   ```
+   </code></pre>
    TYPE          TOTAL     ACTIVE      SIZE
    Images        15        5          5.6GB
    Containers    10        2          1.3GB
-   ```
-
+   </code></pre>
 2. **Remove Unused Resources**:
    
    - Prune unused images, containers, and volumes:
@@ -136,7 +135,6 @@ A team experiences long build times when building a large application with a Doc
      COPY . /app/
      CMD ["python", "app.py"]
      ```
-
 3. **Use Multistage Builds**:
    
    - Reduce image size by separating build and runtime dependencies.

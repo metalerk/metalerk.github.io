@@ -5,7 +5,7 @@ date: 2024-12-09 22:58:00 +/-0000
 description: "A guide addressing frequent Python issues encountered by developers and their solutions."
 categories: [Python, Troubleshooting]
 tags: [python, debugging, stackoverflow, programming]
-author: Esteban
+author: metalerk
 permalink: /common-python-issues-and-solutions/
 ---
 
@@ -21,21 +21,22 @@ Python is one of the most popular programming languages, widely loved for its si
 This error occurs when trying to iterate over an integer instead of an iterable like a list or a string.
 
 **Example Code:**
-{% highlight python %}
+
+<pre><code class="language-python">
 number = 5
 for i in number:
     print(i)
-{% endhighlight %}
+</code></pre>
 
 **Solution:**  
 Ensure you are iterating over an iterable object like a list, range, or string.
 
 **Correct Code:**
-{% highlight python %}
+<pre><code class="language-python">
 number = 5
 for i in range(number):
     print(i)
-{% endhighlight %}
+</code></pre>
 
 ---
 
@@ -45,21 +46,21 @@ for i in range(number):
 This error is caused by inconsistent use of tabs and spaces for indentation.
 
 **Example Code:**
-{% highlight python %}
+<pre><code class="language-python">
 def my_function():
     print("Hello World!")
         print("This will cause an IndentationError")
-{% endhighlight %}
+</code></pre>
 
 **Solution:**  
 Stick to either spaces or tabs for indentation and be consistent throughout your code.
 
 **Correct Code:**
-{% highlight python %}
+<pre><code class="language-python">
 def my_function():
     print("Hello World!")
     print("This will work correctly!")
-{% endhighlight %}
+</code></pre>
 
 ---
 
@@ -84,20 +85,20 @@ This error occurs when Python cannot find the specified module.
 This happens when you try to access an attribute of an object that is `None`.
 
 **Example Code:**
-{% highlight python %}
+<pre><code class="language-python">
 result = my_function()
 print(result.attribute)
-{% endhighlight %}
+</code></pre>
 
 **Solution:**  
 Always validate objects before accessing their attributes.
 
 **Correct Code:**
-{% highlight python %}
+<pre><code class="language-python">
 result = my_function()
 if result is not None:
     print(result.attribute)
-{% endhighlight %}
+</code></pre>
 
 ---
 

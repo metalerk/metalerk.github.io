@@ -21,7 +21,7 @@ Structural Pattern Matching, introduced in Python 3.10, adds a new, expressive w
 
 **Example:**
 
-```python
+<pre><code class="language-python">
 def handle_data(data):
     match data:
         case {"status": "error", "code": 404}:
@@ -30,8 +30,7 @@ def handle_data(data):
             return f"Success with ID {id}"
         case _:
             return "Unknown data format"
-```
-
+</code></pre>
 This feature is ideal for working with nested dictionaries, JSON data, or any complex object.
 
 ---
@@ -45,13 +44,11 @@ One of the most developer-friendly updates in Python 3.10 is the improved error 
 ```plaintext
 SyntaxError: invalid syntax
 ```
-
 **Now (Python 3.10):**
 
 ```plaintext
 SyntaxError: Expected ':' after 'if' condition
 ```
-
 Better error messages make debugging faster and less frustrating, especially for beginners.
 
 ---
@@ -72,15 +69,14 @@ Managing asynchronous tasks in Python just got easier with the introduction of `
 
 **Example:**
 
-```python
+<pre><code class="language-python">
 import asyncio
 
 async def main():
     async with asyncio.TaskGroup() as tg:
         tg.create_task(some_task())
         tg.create_task(another_task())
-```
-
+</code></pre>
 This improvement reduces boilerplate and makes error handling in async workflows more robust.
 
 ---
@@ -91,13 +87,12 @@ Python now includes the `tomllib` module for reading TOML files, a format often 
 
 **Example:**
 
-```python
+<pre><code class="language-python">
 import tomllib
 
 with open("config.toml", "rb") as f:
     config = tomllib.load(f)
-```
-
+</code></pre>
 This addition eliminates the need for third-party libraries when parsing TOML files.
 
 ---
