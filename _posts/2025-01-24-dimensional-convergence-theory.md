@@ -74,37 +74,34 @@ What do you think? Could this theory explain the cosmic silence, or are we missi
 ## Useful Links
 Here are some helpful resources to dive deeper into the concepts discussed in this post:
 
-1. [Fermi Paradox - Wikipedia](https://en.wikipedia.org/wiki/Fermi_paradox)  
+[Fermi Paradox - Wikipedia](https://en.wikipedia.org/wiki/Fermi_paradox)  
    A detailed overview of the Fermi Paradox, including possible solutions and its implications.
 
-2. [Planck Scale - Wikipedia](https://en.wikipedia.org/wiki/Planck_scale)  
+[Planck Scale - Wikipedia](https://en.wikipedia.org/wiki/Planck_scale)  
    Explore the concept of the Planck scale and its relevance to the fabric of the universe.
 
-3. [The Kardashev Scale - Wikipedia](https://en.wikipedia.org/wiki/Kardashev_scale)  
+[The Kardashev Scale - Wikipedia](https://en.wikipedia.org/wiki/Kardashev_scale)  
    A framework to classify civilizations by their energy consumption and technological advancement.
 
-4. [NASA: The Search for Life](https://www.nasa.gov/topics/universe/features/astrobiology.html)  
+[NASA: The Search for Life](https://www.nasa.gov/topics/universe/features/astrobiology.html)  
    An introduction to NASA's ongoing efforts to discover life beyond Earth.
 
-5. [SETI Institute](https://www.seti.org/)  
+[SETI Institute](https://www.seti.org/)  
    Learn about the search for extraterrestrial intelligence and their initiatives.
 
 ---
 ## Useful Links
 
-1. [Fermi Paradox - Wikipedia](https://en.wikipedia.org/wiki/Fermi_paradox)  
+[Fermi Paradox - Wikipedia](https://en.wikipedia.org/wiki/Fermi_paradox)  
    A comprehensive overview of the Fermi Paradox, discussing its origins, implications, and various proposed solutions.
 
-2. [Planck Units - Wikipedia](https://en.wikipedia.org/wiki/Planck_units)  
+[Planck Units - Wikipedia](https://en.wikipedia.org/wiki/Planck_units)  
    An explanation of Planck units, which are natural units of measurement based on fundamental physical constants, relevant to discussions about the fundamental scales of the universe.
 
-3. [The Kardashev Scale - Wikipedia](https://en.wikipedia.org/wiki/Kardashev_scale)  
+[The Kardashev Scale - Wikipedia](https://en.wikipedia.org/wiki/Kardashev_scale)  
    An introduction to the Kardashev Scale, a method of measuring a civilization's level of technological advancement based on its energy consumption.
 
-4. [NASA: The Search for Life](https://www.nasa.gov/subject/6891/search-for-life/)  
-   An overview of NASA's efforts and missions dedicated to finding evidence of life beyond Earth.
-
-5. [SETI Institute](https://www.seti.org/)  
+[SETI Institute](https://www.seti.org/)  
    Learn about the Search for Extraterrestrial Intelligence (SETI) and the scientific endeavors to detect signals from alien civilizations.
 
 ---
@@ -121,11 +118,11 @@ Here are some helpful resources to dive deeper into the concepts discussed in th
 
 ### Books
 
-1. **"The Three-Body Problem" by Liu Cixin**  
+**"The Three-Body Problem" by Liu Cixin**  
    A science fiction novel that explores complex themes including the Fermi Paradox, advanced civilizations, and the nature of reality.
 
-2. **"A Brief History of Time" by Stephen Hawking**  
+**"A Brief History of Time" by Stephen Hawking**  
    A seminal work that discusses cosmology, the nature of time, and the universe, providing a foundation for understanding concepts related to the Fermi Paradox and advanced civilizations.
 
-3. **"Extraterrestrial: The First Sign of Intelligent Life Beyond Earth" by Avi Loeb**  
+**"Extraterrestrial: The First Sign of Intelligent Life Beyond Earth" by Avi Loeb**  
    A provocative book that examines the possibility of recent interstellar objects being evidence of advanced alien technology.
