@@ -35,9 +35,11 @@ permalink: /blog/
   <br>
   {{ post.date | date: "📅 %d %B %Y 🕒 %T" }}
   
-  Categories: {{ post.categories | join: ", "}}
+  **Categories:** *{{ post.categories | join: ", "}}*
+  
   <br>
-  Tags: {{ post.tags | join: ", " }}
+
+  **Tags:** *{{ post.tags | join: ", " }}*
   
   <br>
   <hr>
