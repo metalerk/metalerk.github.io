@@ -11,6 +11,7 @@ permalink: /dimensional-convergence-theory/
 ---
 
 The **Fermi Paradox** presents us with a fascinating question: if the universe is so vast and full of potential for life, why haven't we encountered evidence of other civilizations? In this post, I propose a fresh perspective that I call the **Dimensional Convergence Theory**. This theory suggests that advanced civilizations do not communicate or expand within the three-dimensional universe as we understand it. Instead, they inevitably "transcend" into higher dimensions or entirely different states of existence.
+This is just a bold **idea**, something stuck in my head from quite some time. Don't take it as a scientific theory, but just as an exercise of imagination. And who knows? Maybe I'm onto something.
 
 ---
 
