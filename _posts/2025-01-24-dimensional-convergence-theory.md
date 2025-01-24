@@ -118,11 +118,11 @@ Here are some helpful resources to dive deeper into the concepts discussed in th
 
 ### Books
 
-**"The Three-Body Problem" by Liu Cixin**  
+- **"The Three-Body Problem" by Liu Cixin**  
    A science fiction novel that explores complex themes including the Fermi Paradox, advanced civilizations, and the nature of reality.
 
-**"A Brief History of Time" by Stephen Hawking**  
+- **"A Brief History of Time" by Stephen Hawking**  
    A seminal work that discusses cosmology, the nature of time, and the universe, providing a foundation for understanding concepts related to the Fermi Paradox and advanced civilizations.
 
-**"Extraterrestrial: The First Sign of Intelligent Life Beyond Earth" by Avi Loeb**  
+- **"Extraterrestrial: The First Sign of Intelligent Life Beyond Earth" by Avi Loeb**  
    A provocative book that examines the possibility of recent interstellar objects being evidence of advanced alien technology.
