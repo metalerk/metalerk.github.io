@@ -23,7 +23,7 @@ Recently, I had the privilege of collaborating with a dear friend and creative a
 
 This experience has led me to ponder the delicate, almost weightless boundaries between art and software development. Are they truly such distant realms? Even within the tech industry, there are artists who sculpt lines of code with the same precision and sensibility as a painter or poet, crafting what we often refer to as masterpieces. In the world of Python, for instance, there's even a term for this kind of elegance: _pythonic code_—clear, graceful, almost lyrical in its simplicity.
 
-Our piece is titled **“Concreto en Juego”.** It draws its breath from the city's relentless heartbeat and from the possibility of finding sanctuary in the unexpected—a glimmer of refuge amidst a world where the perfection of the Netherlands quietly imposes invisible limits. The work emerges as a game of resistance; a playground where body, matter, and code converse freely, without barriers, without rigid contours.
+Our piece is titled **"Concreto en Juego".** It draws its breath from the city's relentless heartbeat and from the possibility of finding sanctuary in the unexpected—a glimmer of refuge amidst a world where the perfection of the Netherlands quietly imposes invisible limits. The work emerges as a game of resistance; a playground where body, matter, and code converse freely, without barriers, without rigid contours.
 
 Inevitably, this entire process has become a mirror—an invitation to pause and look closely at my own creative path, to trace how I shape and carve ideas, whether within a digital canvas or the invisible architecture of a program.
 
