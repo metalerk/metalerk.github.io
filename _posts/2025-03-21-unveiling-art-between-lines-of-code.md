@@ -19,13 +19,13 @@ permalink: /unveiling-art-between-lines-of-code/
 
 ---
 
-Recently, I had the privilege of [collaborating](https://milomiranda.github.io) with a dear friend and creative accomplice: the multifaceted, enigmatic, and ever-dazzling [**Milo Miranda**](https://instagram.com/milomiranda/). Together, we are on the verge of unveiling a piece of digital visual art at Amsterdam's **Vondelbunker**—a project unlike anything I've had the chance to be part of before, singular in its pulse and resonance.
+Recently, I had the privilege of [collaborating](https://milomiranda.github.io) with a dear friend and creative accomplice: the multifaceted, enigmatic, and ever-dazzling [**Milo Miranda**](https://instagram.com/milomiranda/). Together, we are on the verge of unveiling a piece of digital visual art at Amsterdam's **Vondelbunker**, a project unlike anything I've had the chance to be part of before, singular in its pulse and resonance.
 
-This experience has led me to ponder the delicate, almost weightless boundaries between art and software development. Are they truly such distant realms? Even within the tech industry, there are artists who sculpt lines of code with the same precision and sensibility as a painter or poet, crafting what we often refer to as masterpieces. In the world of Python, for instance, there's even a term for this kind of elegance: _pythonic code_—clear, graceful, almost lyrical in its simplicity.
+This experience has led me to ponder the delicate, almost weightless boundaries between art and software development. Are they truly such distant realms? Even within the tech industry, there are artists who sculpt lines of code with the same precision and sensibility as a painter or poet, crafting what we often refer to as masterpieces. In the world of Python, for instance, there's even a term for this kind of elegance: _pythonic code_: clear, graceful, almost lyrical in its simplicity.
 
-Our piece is titled **"Concreto en Juego".** It draws its breath from the city's relentless heartbeat and from the possibility of finding sanctuary in the unexpected—a glimmer of refuge amidst a world where the perfection of the Netherlands quietly imposes invisible limits. The work emerges as a game of resistance; a playground where body, matter, and code converse freely, without barriers, without rigid contours.
+Our piece is titled **"Concreto en Juego".** It draws its breath from the city's relentless heartbeat and from the possibility of finding sanctuary in the unexpected, a glimmer of refuge amidst a world where the perfection of the Netherlands quietly imposes invisible limits. The work emerges as a game of resistance; a playground where body, matter, and code converse freely, without barriers, without rigid contours.
 
-Inevitably, this entire process has become a mirror—an invitation to pause and look closely at my own creative path, to trace how I shape and carve ideas, whether within a digital canvas or the invisible architecture of a program.
+Inevitably, this entire process has become a mirror, an invitation to pause and look closely at my own creative path, to trace how I shape and carve ideas, whether within a digital canvas or the invisible architecture of a program.
 
 
 ## The Creative Coding Process
