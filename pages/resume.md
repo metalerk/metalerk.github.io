@@ -38,8 +38,13 @@ permalink: /resume/
 
 ## Professional Experience
 
+### Backend Developer
+**Aurea Imaging**, Netherlands | *Feb 2025 – Present*
+
+*Technologies*: Python, Kubernetes, Google Cloud Platform, FastAPI
+
 ### Python Data Engineer
-**Rabobank**, Netherlands | *May 2024 – Present*
+**Rabobank**, Netherlands | *May 2024 – Nov 2024*
 
 - Developed APIs in Azure using Python.
 - Created and maintained data pipelines with Apache Airflow.

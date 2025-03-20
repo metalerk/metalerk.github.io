@@ -50,7 +50,7 @@ media_subpath: /assets/img/site/
 
 <section id="github-page-layout">
     <aside id="github-sidebar">
-        <img id="github-profile-avatar" src="assets/img/site/luis.jpg" alt="User Avatar">
+        <img id="github-profile-avatar" src="assets/img/site/luis.HEIC" alt="User Avatar">
         <div id="github-profile-info">
             <h2 id="github-profile-name">Luis Esteban Rodriguez</h2>
             <p id="github-profile-username"><a href="http://github.com/metalerk" target="_blank">@metalerk</a></p>
@@ -58,7 +58,7 @@ media_subpath: /assets/img/site/
         </div>
         <div id="github-profile-details">
             <ul>
-                <li><span class="icon">🏢</span> <span>Rabobank</span></li>
+                <li><span class="icon">🏢</span> <span><a href="https://aureaimaging.com" target="_blank">Aurea Imaging</a></span></li>
                 <li><span class="icon">📍</span> <span>Netherlands 🇳🇱</span></li>
                 <li><span class="icon">📧</span> <a href="mailto:rodriguezjluis0@gmail.com">rodriguezjluis0@gmail.com</a></li>
                 <li><span class="icon">🔗</span> <a href="http://metalerk.github.io" target="_blank">metalerk.github.io</a></li>
