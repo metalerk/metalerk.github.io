@@ -2,7 +2,11 @@
 
 source "https://rubygems.org"
 
-ruby "~> 3.3.4"
+# Relax Ruby version requirement
+# ruby "~> 3.3.4"
+
+# OR relax it to allow older versions:
+ruby ">= 3.0.0"
 
 gem "kramdown", "~> 2.4.0"
 gem "kramdown-parser-gfm", "~> 1.1.0"
