@@ -19,7 +19,7 @@ permalink: /unveiling-art-between-lines-of-code/
 
 ---
 
-Recently, I had the privilege of [collaborating](https://milomiranda.github.io) with a dear friend and creative accomplice: the multifaceted, enigmatic, and ever-dazzling [**Milo Miranda**](https://instagram.com/milomiranda/). Together, we are on the verge of unveiling a piece of digital visual art at Amsterdam's **Vondelbunker**, a project unlike anything I've had the chance to be part of before, singular in its pulse and resonance.
+Recently, I had the privilege of [collaborating](https://milomiranda.github.io) with a dear friend and creative accomplice: the multifaceted, enigmatic, and ever-dazzling [**Milo Miranda**](https://instagram.com/milomiranda/). Together, we are on the verge of unveiling a piece of digital visual art at [**Vondelbunker**](https://vondelbunker.nl) in Amsterdam; a project unlike anything I've had the chance to be part of before, singular in its pulse and resonance.
 
 This experience has led me to ponder the delicate, almost weightless boundaries between art and software development. Are they truly such distant realms? Even within the tech industry, there are artists who sculpt lines of code with the same precision and sensibility as a painter or poet, crafting what we often refer to as masterpieces. In the world of Python, for instance, there's even a term for this kind of elegance: _pythonic code_: clear, graceful, almost lyrical in its simplicity.
 
@@ -30,7 +30,7 @@ Inevitably, this entire process has become a mirror, an invitation to pause and 
 
 ## The Creative Coding Process
 
-My creative coding process always begins with immersing myself in the core idea or challenge at hand. I think of it as _"the question”_: what is it that I am tasked to resolve, unveil, or bring to life?
+My creative coding process always begins with immersing myself in the core idea or challenge at hand. I think of it as _"the question"_: what is it that I'm tasked to resolve, unveil, or bring to life?
 
 This question becomes the anchor, the starting point from which I can abstract and shape an algorithm, much like sketching the rough outlines of a solution before filling in the details.
 
@@ -72,7 +72,7 @@ COLOR_RANGES = {
 }
 ```
 
-Each HSV range represents a vivid stroke of color we target, like a digital brush that's tuned precisely to capture specific pigments in motion. The choice of neon, lime, and classic greens/yellows feels like an intentional nod toward vibrant, synthetic, almost futuristic aesthetics. We aren't just detecting color; but curating a color mood.
+Each **HSV range** represents a vivid stroke of color we target, like a digital brush that's tuned precisely to capture specific pigments in motion. The choice of neon, lime, and classic greens/yellows feels like an intentional nod toward vibrant, synthetic, almost futuristic aesthetics. We aren't just detecting color; but **curating a color mood.**
 
 
 ## Composition and Layering
@@ -127,3 +127,9 @@ Feels modular and mathematical. Like arranging building blocks or setting up par
 This is **algorithmic art**. It's a structured symphony of detection, masking, layering, and lighting tweaks, yet behind that rigid mathematical backbone lies freedom. Freedom to remix colors, swap overlays, play with gamma, and render something aesthetically unique every single time.
 
 Through this intersection of art and technology, we are reminded that creativity thrives not only in open canvases but equally within structured lines of beautifully written code.
+
+<br>
+<h2><q>Concreto en Juego</q>, Amsterdam, 2025.</h2>
+<br>
+
+<iframe src="https://www.youtube.com/embed/KSPJfB7Yr9A?si=N1LtkU-Go6ZRooXN" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
