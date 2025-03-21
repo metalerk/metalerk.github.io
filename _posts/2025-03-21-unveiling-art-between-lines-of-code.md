@@ -43,7 +43,7 @@ Leveraging the power of the **OpenCV library**, I've woven together a system tha
 
 We are essentially defining a painter's palette upfront:
 
-```python
+<pre><code class="language-python">
 COLOR_RANGES = {
     "yellow": {
         "lower": np.array([20, 100, 100]),
@@ -70,7 +70,7 @@ COLOR_RANGES = {
         "upper": np.array([40, 130, 255])
     },
 }
-```
+</code></pre>
 
 Each **HSV range** represents a vivid stroke of color we target, like a digital brush that's tuned precisely to capture specific pigments in motion. The choice of neon, lime, and classic greens/yellows feels like an intentional nod toward vibrant, synthetic, almost futuristic aesthetics. We aren't just detecting color; but **curating a color mood.**
 
@@ -90,12 +90,11 @@ The care in aligning overlays based on contours and bounding boxes is akin to ho
 
 The `apply_gamma_correction()` function feels like the artist adjusting exposure on a canvas:
 
-```python
+<pre><code class="language-python">
 look_up_table = np.array([((i / 255.0) ** (1.0 / gamma)) * 255 for i in np.arange(0, 256)])
-```
+</code></pre>
 
 Subtle, optional, but essential if brightness shifts feel "off." It gives the artist's brush finer control over how the audience perceives light, making sure nothing is unintentionally overexposed or dull. It's almost photographic. A darkroom touch.
-
 
 
 ## Rhythm & Motion
@@ -109,7 +108,7 @@ The print statements, the progress bar, and the preview window are our performan
 
 The way we store the `video_settings` in tuples:
 
-```python
+<pre><code class="language-python">
 video_settings = (
     ("01", ["F", "F", "F"], 1.5, ["green", "yellow", "lime_neon"]),
     ("02", ["A", "A"], 1.5, ["green", "lime_neon"]),
@@ -117,7 +116,7 @@ video_settings = (
     ("04", ["C"], 1.5, ["orange"]),
     ("05", ["D", "D"], 1.5, ["green", "lime_neon"]),
 )
-```
+</code></pre>
 
 Feels modular and mathematical. Like arranging building blocks or setting up parameters for a generative art piece. It's minimal, clean, yet holds infinite potential combinations depending on how many overlays and colors we want to mix.
 
@@ -128,7 +127,6 @@ This is **algorithmic art**. It's a structured symphony of detection, masking, l
 
 Through this intersection of art and technology, we are reminded that creativity thrives not only in open canvases but equally within structured lines of beautifully written code.
 
-<br>
 <h2><q>Concreto en Juego</q>, Amsterdam, 2025.</h2>
 <br>
 
