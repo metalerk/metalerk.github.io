@@ -30,7 +30,7 @@ Inevitably, this entire process has become a mirror, an invitation to pause and 
 
 ## The Creative Coding Process
 
-My creative coding process always begins with immersing myself in the core idea or challenge at hand. I think of it as _"the question"_: what is it that I'm tasked to resolve, unveil, or bring to life?
+My creative coding process always begins with immersing myself in the core idea or challenge at hand. I think of it as **_the question_**: what is it that I'm tasked to resolve, unveil, or bring to life?
 
 This question becomes the anchor, the starting point from which I can abstract and shape an algorithm, much like sketching the rough outlines of a solution before filling in the details.
 
