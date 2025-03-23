@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta property="og:title" content="Concreto en Juego" />
+  <meta property="og:description" content="Concreto en Juego, Amsterdam, 2025." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/milomiranda/milomiranda.github.io/refs/heads/main/img/videothumbnail.jpg" />
+  <meta property="og:url" content="https://milomiranda.github.io/" />
+  <meta property="og:type" content="website" />
+
+  <title>Concreto en Juego</title>
+  <link rel="icon" type="image/jpeg" href="pages/projects/art/concreto_en_juego/img/Favicon.jpg">
+  <style>
+    body {
+      font-family: Helvetica;
+      text-align: center;
+      margin: 20px;
+      padding: 0;
+    }
+    h1, h2 {
+      color: #000;
+      margin-bottom: 10px;
+    }
+    .description {
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: justify;
+      padding: 0 10px;
+    } 
+    .locale-link {
+      text-decoration: none;
+      color: #000;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    .buttons a {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #000;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .buttons a:hover {
+      background-color: #555;
+    }
+    .social-links {
+      margin-top: 40px;
+    }
+    .social-links a {
+      margin: 10px;
+      text-decoration: none;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .buttons a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+      }
+      .social-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .social-links a {
+        margin: 5px 0;
+      }
+    }
+
+    /* Modal Styles */
+    .modal-container {
+      position: fixed;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 2000;
+    }
+    .modal-content {
+      background: white;
+      padding: 20px;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 8px;
+      text-align: center;
+      position: relative;
+      overflow-y: auto;
+      max-height: 90%;
+    }
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .modal-name {
+      color: #007BFF;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .modal-content.transparent-modal {
+      background: transparent;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      overflow: hidden;
+    }
+    .modal-close.transparent-close {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <br><br>
+  <div class="description">
+
+    <h3>NL | <a href="pages/projects/art/concreto_en_juego/concreto_en_juego_en_full_text.html" class="locale-link">EN</a> | <a href="pages/projects/art/concreto_en_juego/concreto_en_juego_es_full_text.html" class="locale-link">ES</a></h3>
+    <p>
+    <b>Titel:</b> Concreto en Juego
+    <br>
+    <b>Auteurs:</b> <span class="modal-name" onclick="openModal(
+      'Milo Miranda', 'Instagram: <a href=\'https://instagram.com/milomiranda/\' target=\'_blank\'>@milomiranda</a>\
+      <br><br>Facebook: <a href=\'https://www.facebook.com/milomiranda2019/\' target=\'_blank\'>Milo Miranda Escamilla </a>\
+      <br><br>Email: <a href=\'mailto:milo.miranda.escamilla@gmail.com\'>milo.miranda.escamilla@gmail.com</a>'
+    )">
+    Milo Miranda
+  </span>,
+  <span class="modal-name" onclick="openModal('Saskia Benitez', 'Instagram: <a href=\'https://instagram.com/sasbube/\' target=\'_blank\'>@sasbube</a>')">Saskia Benitez</span>,
+  <span class="modal-name" onclick="openModal('Ida Osten', 'Instagram: <a href=\'https://instagram.com/idaosten/\' target=\'_blank\'>@idaosten</a>')">Ida Osten</span>,
+  <span class="modal-name" onclick="openModal(
+    'Luis Esteban Rodriguez', 'Website: <a href=\'https://metalerk.github.io/\' target=\'_blank\'>Sacred Circuits</a>\
+    <br><br>Instagram: <a href=\'https://instagram.com/lesteban05/\' target=\'_blank\'>@lesteban05</a>'
+    )">
+    Luis Esteban Rodriguez
+  </span>
+  <br>
+    <b>Jaar:</b> 2025
+    <br>
+    <b>Locatie:</b> Amsterdam
+    <br>
+    <b>Techniek:</b> Digitale videokunst met interventie van code en computervisie
+    </p>
+
+    <br>
+
+    <p>
+    Het kunstwerk ontstaat als een speelse vorm van verzet tegen opgelegde perfectie; een ruimte waarin lichaam, materie en code zich vrijelijk verweven. Geïnspireerd door het kloppende hart van de stad en het verlangen naar toevlucht in het onverwachte, vindt het project zijn kern in verbinding: de broederschap die ontstaat uit kunst en de samenwerking tussen degenen die gezamenlijk creëren. Alles begon met een eenvoudige maar krachtige handeling: het breken van bakstenen. Het droge geluid van klei die breekt onder de handen van <b>Saskia Benitez</b> en de kunstenaar was geen daad van vernietiging, maar juist het begin van een transformatie. Fragmenten die ooit barrières vormden, veranderden in symbolen van een gezamenlijk ritueel en een metafoor voor de voortdurende dialoog tussen het fysieke en het immateriële.
+    </p>
+
+    <br>
+
+    <p>
+    <b>Saskia Benitez</b> introduceert het spel als een essentiële creatieve methode, waarbij ze de materialiteit van de ruimte gebruikt om relaties te bouwen tussen mens en omgeving. Haar nomadische aanpak leidt ertoe dat ze materialen en ervaringen verzamelt die de ruimte omzetten in een veld vol mogelijkheden. Vanuit deze optiek wordt het lichaam een instrument voor ontdekking en verandering. Dit sluit aan bij het voorstel van <b>Ida Osten</b>, die dans gebruikt als middel om stedelijke architectuur te herinterpreteren. Haar beweging tart niet alleen de starheid van de ruimte, maar creëert ook een verbinding met een digitale aanwezigheid die, hoewel tijdens de opname nog onzichtbaar, later wordt geïntegreerd als een echo van haar eigen lichaam in de scène.
+    </p>
+
+    <br>
+
+    <p>
+    <b>Luis Esteban</b> voegt op zijn beurt een digitale laag toe aan deze interdisciplinaire symfonie. Zijn werk met computervisie herschikt de relatie tussen het tastbare en het virtuele, waardoor een choreografie ontstaat waarin kleuren en contouren fungeren als ankerpunten voor het genereren van nieuwe beelden. Door een algoritmische structuur van lagen, basisvideo, kleurmaskers en overlays, versterkt zijn interventie de waarneming van de omgeving en verandert deze in een ruimte van voortdurende mutatie.
+    </p>
+
+    <br>
+
+    <p>
+    Het werk getuigt van identiteit als een vloeiende entiteit, waarbij het digitale beeld fungeert als een verlengstuk van de zintuiglijke ervaring. Elke frame werd zorgvuldig bewerkt om een dialoog te creëren tussen het alledaagse en het onverwachte, waarbij het experiment met code niet slechts technisch is, maar ook een visueel compositorisch middel. Gedurende dit proces worden regels gebogen, herschreven en omvergeworpen, waardoor kunst verandert in een eindeloos spel tussen het tastbare en het onzichtbare. Dit project weerspiegelt de Mexicaanse creativiteit binnen de hedendaagse digitale kunst; het is een uiting van broederschap die opgelegde perfectie uitdaagt met de vrijheid van spel en experiment.
+    </p>
+
+    <br>
+    <p>
+      Het delen van het werk overstijgt het visuele aspect. Door <b>Lidia Vilchis</b> uit te nodigen om de taal van het werk te vertalen naar woorden, breidt het kunstwerk zich uit en stelt het de toeschouwer in staat zijn grenzen niet alleen visueel, maar ook interpretatief te overschrijden. Zo stopt de kunst niet bij het beeld, maar blijft zij zich transformeren door iedereen die haar ervaart.
+    </p>
+    <br>
+    <h3><a href="pages/projects/art/concreto_en_juego/code.html" class="locale-link">Bekijk de Code</a></h3>
+    <br>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal-container" onclick="closeModal(event)">
+    <div class="modal-content" id="modal-content">
+      <span class="modal-close" onclick="closeModal(event)">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-body"></p>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <a href="pages/projects/art/concreto_en_juego/index.html" class="modal-name">Ga Terug</a>
+  </div>
+
+  <!-- Modal Scripts -->
+  <script>
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalBody = document.getElementById('modal-body');
+
+    function openModal(name, info) {
+      modalTitle.textContent = name;
+      modalBody.innerHTML = info;
+      modal.style.display = 'flex';
+    }
+
+    function closeModal(e) {
+      if (e.target === modal || e.target.classList.contains('modal-close')) {
+        modal.style.display = 'none';
+        modalBody.innerHTML = '';
+        modalTitle.textContent = '';
+        document.getElementById('modal-content').classList.remove('transparent-modal');
+        document.querySelector('.modal-close').classList.remove('transparent-close');
+      }
+    }
+
+    function openShopModal() {
+      modalTitle.textContent = '';
+      modalBody.innerHTML = `
+        <iframe src="https://shop.weeztix.com/ab6bdee4-bd65-4b42-ad36-fe9033c21be1/tickets"
+          width="100%" height="100%" style="border:none; width:100vw; height:100vh;"></iframe>
+      `;
+      document.getElementById('modal-content').classList.add('transparent-modal');
+      document.querySelector('.modal-close').classList.add('transparent-close');
+      modal.style.display = 'flex';
+    }
+
+    function openSubscribeModal() {
+      modalTitle.textContent = 'Stay in the loop';
+      modalBody.innerHTML = `
+    <div id="mc_embed_shell">
+      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width: 100%; max-width:600px; margin:0 auto; padding:20px;}
+      </style>
+      <div id="mc_embed_signup">
+        <form action="https://gmail.us13.list-manage.com/subscribe/post?u=0b3f545d15774ad2b02db0f67&amp;id=f88d1cc96a&amp;f_id=0054e6e2f0"
+              method="post" target="_blank" class="validate">
+          <div id="mc_embed_signup_scroll">
+            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+              <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="">
+            </div>
+            <div class="mc-field-group"><label for="mce-FNAME">First Name </label>
+              <input type="text" name="FNAME" class="text" id="mce-FNAME" value="">
+            </div>
+            <div class="mc-field-group"><label for="mce-LNAME">Last Name </label>
+              <input type="text" name="LNAME" class="text" id="mce-LNAME" value="">
+            </div>
+            <div id="mce-responses" class="clear foot">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <div aria-hidden="true" style="position:absolute; left:-5000px;">
+              <input type="text" name="b_0b3f545d15774ad2b02db0f67_f88d1cc96a" tabindex="-1" value="">
+            </div>
+            <div class="optionalParent">
+              <div class="clear foot">
+                <input type="submit" name="subscribe" class="button" value="Subscribe">
+                <p style="margin:0 auto;">
+                  <a href="http://eepurl.com/jayQUc" title="Mailchimp - email marketing made easy and fun">
+                    <span style="display:inline-block; background-color:transparent; border-radius:4px;">
+                      <img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width:220px; height:40px; display:flex; padding:2px 0px; justify-content:center; align-items:center;">
+                    </span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  `;
+      document.getElementById('modal-content').classList.remove('transparent-modal');
+      document.querySelector('.modal-close').classList.remove('transparent-close');
+      modal.style.display = 'flex';
+    }
+  </script>
+
+  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+  <script>
+  (function($) {
+    window.fnames = new Array(); window.ftypes = new Array();
+    fnames[0]='EMAIL';ftypes[0]='email';
+    fnames[1]='FNAME';ftypes[1]='text';
+    fnames[2]='LNAME';ftypes[2]='text';
+  })(jQuery); var $mcj = jQuery.noConflict(true);
+  </script>
+
+</body>
+</html>
