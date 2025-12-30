@@ -15,6 +15,8 @@ gem "jekyll-remote-theme", "~> 0.4.3"
 gem "jekyll-paginate", "~> 1.1.0"
 gem "jekyll-seo-tag", "~> 2.8.0"
 gem "html-proofer", "~> 5.0", group: :test
+gem "logger"  # for Ruby 3.5+ warning
+gem "base64"
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"

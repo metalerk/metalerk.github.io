@@ -50,7 +50,7 @@ media_subpath: /assets/img/site/
 
 <section id="github-page-layout">
     <aside id="github-sidebar">
-        <img id="github-profile-avatar" src="assets/img/site/luis.HEIC" alt="User Avatar">
+        <img id="github-profile-avatar" src="assets/img/site/luis_nes.jpg" alt="User Avatar">
         <div id="github-profile-info">
             <h2 id="github-profile-name">Luis Esteban Rodriguez</h2>
             <p id="github-profile-username"><a href="http://github.com/metalerk" target="_blank">@metalerk</a></p>
@@ -86,6 +86,10 @@ media_subpath: /assets/img/site/
                   <td style="padding: 8px;"><code>resume</code></td>
                   <td style="padding: 8px;">Shows <a href="/resume/">Resume</a></td>
               </tr>
+              <tr>
+                  <td style="padding: 8px;"><code>fitness</code></td>
+                  <td style="padding: 8px;">Redirects to <a href="/pages/personal/fitness/">Fitness</a></td>
+              </tr>
           </tbody>
       </table>
       
@@ -119,6 +123,10 @@ media_subpath: /assets/img/site/
               'resume': () => {
                   window.location.href = '/resume/';
                   return 'Redirecting to /resume/...';
+              },
+              'fitness': () => {
+                  window.location.href = '/pages/personal/fitness/';
+                  return 'Redirecting to /pages/personal/fitness/...';
               },
           };
       
