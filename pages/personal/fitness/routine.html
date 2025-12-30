@@ -117,6 +117,78 @@ section:last-of-type {
     transform: translateY(-1px);
 }
 
+/* ---------- MODAL ---------- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    padding: 1rem;
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+.modal {
+    background: #ffffff;
+    border-radius: 0.75rem;
+    max-width: 720px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.4);
+    padding: 1rem 1rem 1.4rem;
+    position: relative;
+}
+
+.modal h2 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.7rem;
+    border: none;
+    background: transparent;
+    font-size: 1.4rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    border-radius: 0.6rem;
+    overflow: hidden;
+    margin-top: 0.75rem;
+    background: #000;
+}
+
+.modal-video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Make workout items feel clickable */
+.clickable-workout {
+    cursor: pointer;
+    transition: color 0.15s ease, transform 0.1s ease;
+}
+
+.clickable-workout:hover {
+    color: #0f766e;
+    transform: translateX(1px);
+}
+
 /* ---------- DARK MODE ---------- */
 body.dark {
     background: #0f172a;
@@ -151,6 +223,12 @@ body.dark .home-btn:hover,
 body.dark .theme-btn:hover {
     background: #e5e7eb;
     color: #020617;
+}
+
+/* Dark mode modal tweaks */
+body.dark .modal {
+    background: #020617;
+    color: #e5e7eb;
 }
 
 /* Responsive */
@@ -202,14 +280,15 @@ body.dark .theme-btn:hover {
                 <li>Lateral Raises - 4x12 (last set drop set)</li>
                 <li>Rear Delt Flys (Dumbbells) - 3x12</li>
                 <li>Cuban Press - 3x12 (light, controlled)</li>
-                <li>DB Squeeze Press (inner/lower chest) - 3x10-12</li>
-                <li>One-Arm Cable Pushdowns - 3x12-15</li>
+                <li>Weighted Dips (chest focused) - 3-4x6-10</li>
+                <li>Skull Crushers (lying) - 3-4x9-12</li>
                 <li>Triceps Dips (weighted if possible) - 3x10</li>
             </ul>
 
             <h3>🔥 Extra Mile (Optional)</h3>
             <ul>
-                <li>Front Raises + Landmine Press (superset) - 3x10 each</li>
+                <li>Front Raises (superset) - 3x10</li>
+                <li>Landmine Press (superset) - 3x10</li>
             </ul>
         </section>
 
@@ -325,7 +404,25 @@ body.dark .theme-btn:hover {
 
 </div>
 
-<!-- Dark Mode Script -->
+<!-- Video Modal -->
+<div id="videoModal" class="modal-overlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" aria-label="Close video">&times;</button>
+    <h2 id="modalTitle">Exercise Video</h2>
+    <div class="modal-video-wrapper">
+      <iframe
+        id="modalVideo"
+        src=""
+        title="Workout demo"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Dark Mode Script + Modal Script -->
 <script>
 const body = document.body;
 const btn = document.getElementById("themeToggle");
@@ -351,8 +448,128 @@ btn.addEventListener("click", () => {
         btn.textContent = "🌙 Dark Mode";
     }
 });
-</script>
 
+/* ---------- WORKOUT VIDEO MODAL ---------- */
+/* Map exercise names to YouTube video IDs (not full URLs)
+   Example: normal link https://www.youtube.com/watch?v=dQw4w9WgXcQ -> ID is "dQw4w9WgXcQ"
+   TODO: replace VIDEO_ID_... with your actual IDs.
+*/
+const workoutVideos = {
+    "Barbell Bench Press": "5NStATS0zrw",
+    "Dumbbell Shoulder Press": "k6tzKisR3NY",
+    "Behind-the-Neck Press (light)": "Bnl4hRGySCM",
+    "Lateral Raises": "dybxZJaWxCY",
+    "Rear Delt Flys (Dumbbells)": "PkGcUy-XDMY",
+    "Cuban Press": "rv41bj3JTkQ",
+    "Weighted Dips (chest focused)": "5k7Atrwsty0",
+    "Skull Crushers (lying)": "K3mFeNz4e3w",
+    "Triceps Dips (weighted if possible)": "Gz8NkGoNPkc",
+    "Front Raises (superset)": "9ThlTL25DH8",
+    "Landmine Press (superset)": "6cSTRPhpubs",
+
+    "Back Squats": "PPmvh7gBTi0",
+    "Front Squats": "_qv0m3tPd3s",
+    "Leg Press": "BnacvXdaxq8",
+    "Walking Lunges (DB or BB)": "BYe4uyGF-h4",
+    "Standing Calf Raises": "ADITZCcUyVo",
+    "Leg Raises": "PpZxg66ftYc",
+    "Decline Weighted Sit-Ups": "0yFOwdzvWNo",
+    "Ab Wheel Rollouts": "XWJmFD_AdbM",
+    "DB Hip Thrusts": "QqtLsnNthbA",
+    "Seated Calf Raise (improvise with DB on knees)": "ar8nav0jGoE",
+
+    "Weighted Pull-Ups (mixed grips)": "VIDEO_ID_PULLUPS",
+    "Barbell Rows": "VIDEO_ID_BAR_ROWS",
+    "Dumbbell Rows (Paused, Full ROM)": "VIDEO_ID_DB_ROWS",
+    "Bodyweight Rows": "VIDEO_ID_BODYWEIGHT_ROWS",
+    "Incline DB Curls": "VIDEO_ID_INCLINE_DB_CURLS",
+    "Zottman Curls": "VIDEO_ID_ZOTTMAN_CURLS",
+    "Cross-Body Hammer Curls": "VIDEO_ID_CROSS_BODY_HAMMER",
+    "Pronated Curls (EZ or DB)": "VIDEO_ID_PRONATED_CURLS",
+    "Barbell Shrugs": "VIDEO_ID_SHRUGS",
+    "Reverse Curls": "VIDEO_ID_REVERSE_CURLS",
+
+    "Incline Barbell or DB Press": "8fXfwG4ftaQ",
+    "Dumbbell Press (Flat)": "VIDEO_ID_DB_FLAT_PRESS",
+    "One-Arm Cable Chest Fly (low to high)": "VIDEO_ID_ONE_ARM_FLY",
+    "Close-Grip Bench Press": "VIDEO_ID_CLOSE_GRIP_BENCH",
+    "Overhead DB Triceps Extension": "VIDEO_ID_OH_TRICEPS_EXT",
+    "Skull Crushers (DB or EZ)": "VIDEO_ID_SKULL_CRUSHERS",
+    "DB Cross-Body Curls": "VIDEO_ID_DB_CROSS_BODY_CURLS",
+    "Concentration Curls": "VIDEO_ID_CONCENTRATION_CURLS",
+    "Push-Ups to Failure + Barbell Drag Curls": "VIDEO_ID_PUSHUPS_DRAG",
+
+    "Deadlifts (Strength)": "VIDEO_ID_DEADLIFTS",
+    "Romanian Deadlifts (DB or BB)": "VIDEO_ID_RDL",
+    "Back Squats (High Volume)": "VIDEO_ID_BACK_SQUAT_HIGH_VOL",
+    "Hip Thrusts (Heavy)": "VIDEO_ID_HIP_THRUSTS",
+    "Hanging Leg Raises": "VIDEO_ID_HANGING_LEG_RAISES",
+    "Landmine 180s": "VIDEO_ID_LANDMINE_180",
+    "Incline Weighted Sit-Ups": "VIDEO_ID_INCLINE_WEIGHTED_SITUPS",
+    "Glute Kickbacks (band or cable)": "VIDEO_ID_GLUTE_KICKBACKS",
+    "Landmine Reverse Lunges": "VIDEO_ID_LANDMINE_REVERSE_LUNGES"
+};
+
+const modalOverlay = document.getElementById("videoModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalVideo = document.getElementById("modalVideo");
+const modalCloseBtn = modalOverlay.querySelector(".modal-close");
+
+// Attach listeners to all workout <li> items except in the Notes section
+const sections = document.querySelectorAll(".workout-plan section");
+sections.forEach((section) => {
+    const header = section.querySelector("h2");
+    const isNotesSection = header && header.textContent.includes("Notes");
+    if (isNotesSection) return; // skip notes
+
+    const items = section.querySelectorAll("li");
+    items.forEach(li => {
+        li.classList.add("clickable-workout");
+        li.addEventListener("click", () => {
+            const fullText = li.textContent.trim();
+            const exerciseName = fullText.split(" - ")[0]; // text before dash
+            openVideoModal(exerciseName);
+        });
+    });
+});
+
+function openVideoModal(exerciseName) {
+    modalTitle.textContent = exerciseName;
+
+    const videoId = workoutVideos[exerciseName];
+
+    if (videoId) {
+        modalVideo.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
+    } else {
+        modalVideo.src = "";
+        // You could show a message somewhere if you want when no video is mapped
+    }
+
+    modalOverlay.classList.add("open");
+    modalOverlay.setAttribute("aria-hidden", "false");
+}
+
+function closeVideoModal() {
+    modalOverlay.classList.remove("open");
+    modalOverlay.setAttribute("aria-hidden", "true");
+    // Stop video playback
+    modalVideo.src = "";
+}
+
+modalCloseBtn.addEventListener("click", closeVideoModal);
+
+modalOverlay.addEventListener("click", (e) => {
+    if (e.target === modalOverlay) {
+        closeVideoModal();
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalOverlay.classList.contains("open")) {
+        closeVideoModal();
+    }
+});
+</script>
 
 </body>
 </html>
