@@ -1,359 +1,608 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weekly Training Plan</title>
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fitness — Personal Hub</title>
+    <style>
+        :root {
+        --bg: #0b0f14;
+        --card: #111826;
+        --text: #e7eefc;
+        --muted: #a9b7d0;
+        --border: rgba(255,255,255,0.10);
+        --accent: #7aa2ff;
+        --accent-2: #46e6b0;
+        --shadow: 0 10px 24px rgba(0,0,0,0.35);
+        --radius: 18px;
+        --focus: 0 0 0 4px rgba(122,162,255,0.25);
+        }
 
-<style>
-/* Reset-ish */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+        [data-theme="light"] {
+        --bg: #f5f7fb;
+        --card: #ffffff;
+        --text: #121826;
+        --muted: #4b5563;
+        --border: rgba(0,0,0,0.10);
+        --accent: #275efe;
+        --accent-2: #0ea5e9;
+        --shadow: 0 10px 24px rgba(17,24,39,0.12);
+        --focus: 0 0 0 4px rgba(39,94,254,0.20);
+        }
 
-body {
-    margin: 0;
-    padding: 1.5rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    line-height: 1.6;
-    color: #111827;
-    background: #f3f4f6;
-}
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+        color: var(--text);
+        background:
+            radial-gradient(1200px 800px at 20% 0%, rgba(122,162,255,0.16), transparent 50%),
+            radial-gradient(1000px 700px at 90% 10%, rgba(70,230,176,0.12), transparent 55%),
+            var(--bg);
+        line-height: 1.6;
+        }
+        a { color: inherit; text-decoration: none; }
+        button { font: inherit; }
 
-.workout-plan {
-    max-width: 900px;
-    margin: 0 auto;
-}
+        /* Top bar */
+        .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(10px);
+        background: color-mix(in srgb, var(--bg) 78%, transparent);
+        border-bottom: 1px solid var(--border);
+        }
+        .topbar-inner {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+        padding: 12px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        }
+        .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+        }
+        .badge {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        box-shadow: var(--shadow);
+        flex: 0 0 auto;
+        }
+        .brand h1 {
+        font-size: 14px;
+        margin: 0;
+        line-height: 1.2;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
+        .brand p {
+        margin: 0;
+        font-size: 12px;
+        color: var(--muted);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
 
-/* Sections as clean cards */
-section {
-    background: #ffffff;
-    padding: 1.5rem 1.25rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
-    margin-bottom: 1.5rem;
-}
+        .actions { display: flex; gap: 10px; align-items: center; }
+        .btn {
+        border: 1px solid var(--border);
+        background: color-mix(in srgb, var(--card) 86%, transparent);
+        color: var(--text);
+        padding: 10px 12px;
+        border-radius: 14px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        font-size: 13px;
+        transition: transform 120ms ease, border-color 120ms ease;
+        user-select: none;
+        white-space: nowrap;
+        }
+        .btn:hover { transform: translateY(-1px); border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+        .btn:active { transform: translateY(0px); }
+        .btn.primary {
+        background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 90%, #000 0%), color-mix(in srgb, var(--accent-2) 85%, #000 0%));
+        border-color: transparent;
+        color: #0b0f14;
+        }
+        [data-theme="light"] .btn.primary { color: #fff; }
 
-h1 {
-    margin: 0;
-}
+        /* Page */
+        .container {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+        padding: 18px 14px 46px;
+        }
 
-h2 {
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
+        .hero {
+        margin-top: 18px;
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: color-mix(in srgb, var(--card) 90%, transparent);
+        box-shadow: var(--shadow);
+        display: grid;
+        gap: 12px;
+        }
 
-h3 {
-    margin-top: 1.25rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #b91c1c;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-}
+        .hero h2 {
+        margin: 0;
+        font-size: clamp(18px, 2.6vw, 24px);
+        letter-spacing: 0.2px;
+        line-height: 1.25;
+        }
+        .hero p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        }
 
-ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
+        .quick {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        }
 
-li {
-    padding-left: 1.2rem;
-    position: relative;
-    margin-bottom: 0.35rem;
-    font-size: 0.98rem;
-}
+        .chip {
+        border: 1px solid var(--border);
+        background: color-mix(in srgb, var(--card) 92%, transparent);
+        padding: 8px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        color: var(--muted);
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        }
+        .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: var(--accent);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent);
+        }
 
-/* Minimal custom bullet */
-li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #9ca3af;
-}
+        /* Menu grid */
+        .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 14px;
+        }
+        @media (min-width: 720px) {
+        .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 1040px) {
+        .grid { grid-template-columns: repeat(3, 1fr); }
+        }
 
-/* Subtle separator between sections */
-hr {
-    border: none;
-    border-top: 1px solid rgba(156, 163, 175, 0.3);
-    margin: 0 0 1.5rem;
-}
+        .card {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: color-mix(in srgb, var(--card) 92%, transparent);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+        position: relative;
+        min-height: 156px;
+        }
+        .card:hover {
+        transform: translateY(-2px);
+        border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+        background: color-mix(in srgb, var(--card) 96%, transparent);
+        }
+        .card:focus-within { box-shadow: var(--shadow), var(--focus); }
 
-/* Notes section */
-section:last-of-type {
-    border-left: 4px solid #0ea5e9;
-}
+        .card a {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        gap: 8px;
+        padding: 16px;
+        height: 100%;
+        outline: none;
+        }
 
-/* Buttons */
-.home-btn,
-.theme-btn {
-    display: inline-block;
-    margin-bottom: 1.5rem;
-    padding: 0.6rem 1.1rem;
-    border-radius: 999px;
-    border: 1px solid #d1d5db;
-    background: white;
-    color: #111827;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: all 0.18s ease;
-    cursor: pointer;
-}
+        .kicker {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        }
 
-.home-btn:hover,
-.theme-btn:hover {
-    background: #111827;
-    color: white;
-    border-color: #111827;
-    transform: translateY(-1px);
-}
+        .icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 14px;
+        background: color-mix(in srgb, var(--card) 80%, transparent);
+        border: 1px solid var(--border);
+        display: grid;
+        place-items: center;
+        font-size: 18px;
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+        }
 
-/* ---------- DARK MODE ---------- */
-body.dark {
-    background: #0f172a;
-    color: #e5e7eb;
-}
+        .pill {
+        font-size: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        color: var(--muted);
+        background: color-mix(in srgb, var(--card) 88%, transparent);
+        white-space: nowrap;
+        }
 
-body.dark section {
-    background: #111827;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
-}
+        .title {
+        margin: 0;
+        font-size: 15px;
+        letter-spacing: 0.2px;
+        line-height: 1.2;
+        }
+        .desc {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        }
 
-body.dark h3 {
-    color: #f87171;
-}
+        .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 700;
+        font-size: 13px;
+        color: color-mix(in srgb, var(--accent) 85%, var(--text));
+        margin-top: 4px;
+        }
 
-body.dark li::before {
-    color: #6b7280;
-}
+        .divider {
+        margin: 16px 0 0;
+        border-top: 1px solid var(--border);
+        }
 
-body.dark hr {
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
+        footer {
+        margin-top: 16px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 12px;
+        }
 
-body.dark .home-btn,
-body.dark .theme-btn {
-    background: #020617;
-    color: #e5e7eb;
-    border: 1px solid #374151;
-}
+        /* Section anchors */
+        .section {
+        scroll-margin-top: 80px;
+        }
 
-body.dark .home-btn:hover,
-body.dark .theme-btn:hover {
-    background: #e5e7eb;
-    color: #020617;
-}
+        /* Minimal modal */
+        dialog {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 0;
+        width: min(640px, calc(100% - 24px));
+        background: var(--card);
+        color: var(--text);
+        box-shadow: var(--shadow);
+        }
+        dialog::backdrop {
+        background: rgba(0,0,0,0.5);
+        backdrop-filter: blur(4px);
+        }
+        .modal-head {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        }
+        .modal-head h3 { margin: 0; font-size: 14px; }
+        .modal-body { padding: 14px 16px 16px; }
+        .modal-body p { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
+        .modal-actions {
+        padding: 12px 16px 16px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        }
 
-/* Responsive */
-@media (min-width: 640px) {
-    body {
-        padding: 2.5rem 1.5rem;
-    }
+        .linklike {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        }
+    </style>
+    </head>
 
-    section {
-        padding: 1.75rem 1.75rem;
-    }
+    <body data-theme="dark">
+    <header class="topbar">
+        <div class="topbar-inner">
+        <div class="brand" role="banner">
+            <div class="badge" aria-hidden="true"></div>
+            <div style="min-width:0;">
+            <h1>Fitness Hub</h1>
+            <p>Getting serious about workouts</p>
+            </div>
+        </div>
 
-    h2 {
-        font-size: 1.4rem;
-    }
+        <div class="actions">
+            <button class="btn" id="homeBtn" type="button" title="Return to top">
+            ⬆️ <span>Home</span>
+            </button>
 
-    li {
-        font-size: 1rem;
-    }
-}
+            <button class="btn primary" id="themeBtn" type="button" aria-pressed="true" title="Toggle light/dark">
+            🌙 <span id="themeText">Dark</span>
+            </button>
+        </div>
+        </div>
+    </header>
 
-@media (min-width: 960px) {
-    body {
-        padding: 3rem 0;
-    }
-}
-</style>
-</head>
+    <main class="container" id="home">
+        <section class="hero">
+        <h2>Personal fitness menu</h2>
+        <p>
+            Everything in one place: training, diet, supplements, progress, etc.
+        </p>
 
-<body>
-
-<div class="workout-plan">
-
-    <!-- Buttons -->
-    <a href="/" class="home-btn">← Back Home</a>
-    <button class="theme-btn" id="themeToggle">🌙 Dark Mode</button>
-
-    <section>
-        <h1>Workout Training Program</h1>
-    </section>
-
-    <!-- YOUR EXISTING CONTENT BELOW -->
-    <!-- Day 1 -->
-    <section>
-            <h2>💥 Day 1 - Chest &amp; Shoulders (Push A)</h2>
-            <ul>
-                <li>Barbell Bench Press - 5x6-8</li>
-                <li>Dumbbell Shoulder Press - 4x8-10</li>
-                <li>Behind-the-Neck Press (light) - 3x10</li>
-                <li>Lateral Raises - 4x12 (last set drop set)</li>
-                <li>Rear Delt Flys (Dumbbells) - 3x12</li>
-                <li>Cuban Press - 3x12 (light, controlled)</li>
-                <li>DB Squeeze Press (inner/lower chest) - 3x10-12</li>
-                <li>One-Arm Cable Pushdowns - 3x12-15</li>
-                <li>Triceps Dips (weighted if possible) - 3x10</li>
-            </ul>
-
-            <h3>🔥 Extra Mile (Optional)</h3>
-            <ul>
-                <li>Front Raises + Landmine Press (superset) - 3x10 each</li>
-            </ul>
+        <div class="quick" aria-label="Quick status chips">
+            <span class="chip"><span class="dot"></span>Current focus: Recomp / Cut</span>
+            <span class="chip"><span class="dot"></span>Work: 09:00–17:00</span>
+            <span class="chip"><span class="dot"></span>Training: 17:00–18:30</span>
+        </div>
         </section>
 
-        <hr>
+        <div class="divider"></div>
 
-        <section>
-            <h2>💥 Day 2 - Legs &amp; Core (Quads, Glutes, Abs)</h2>
-            <ul>
-                <li>Back Squats - 4x5</li>
-                <li>Front Squats - 4x10</li>
-                <li>Leg Press - 4x10 (heels high for glute emphasis)</li>
-                <li>Walking Lunges (DB or BB) - 3x12 steps/leg</li>
-                <li>Standing Calf Raises - 4x15</li>
-                <li>Leg Raises - 3x15</li>
-                <li>Decline Weighted Sit-Ups - 3x12</li>
-                <li>Ab Wheel Rollouts - 3x10-12</li>
-            </ul>
+        <section class="grid section" aria-label="Landing menu">
+        <!-- Card 1 -->
+        <article class="card">
+            <!-- <a href="#ultra-beast" data-open="ultra-beast"> -->
+            <a href="diet.html">
+            <div class="kicker">
+                <div class="icon" aria-hidden="true">😈</div>
+                <span class="pill">Main plan</span>
+            </div>
+            <h3 class="title">Ultra Beast Recomp Regime</h3>
+            <p class="desc">Daily meals + supplements schedule for training days and rest days.</p>
+            <div class="cta">Open →</div>
+            </a>
+        </article>
 
-            <h3>🔥 Extra Mile (Optional)</h3>
-            <ul>
-                <li>DB Hip Thrusts - 4x10</li>
-                <li>Seated Calf Raise (improvise with DB on knees) - 3x15</li>
-            </ul>
+        <!-- Card 2 -->
+        <article class="card">
+            <!-- <a href="#training" data-open="training"> -->
+            <a href="routine.html">
+            <div class="kicker">
+                <div class="icon" aria-hidden="true">🏋️</div>
+                <span class="pill">Routine</span>
+            </div>
+            <h3 class="title">Training Split</h3>
+            <p class="desc">Your weekly lifting structure (push/pull/legs, Wolverine, etc.).</p>
+            <div class="cta">Open →</div>
+            </a>
+        </article>
+
+        <!--
+        <article class="card">
+            <a href="#supps" data-open="supps">
+            <div class="kicker">
+                <div class="icon" aria-hidden="true">⚡</div>
+                <span class="pill">Stack</span>
+            </div>
+            <h3 class="title">Supplements & Timing</h3>
+            <p class="desc">Electrolytes, creatine, collagen — dosing rules and reminders.</p>
+            <div class="cta">Open →</div>
+            </a>
+        </article>
+
+        <article class="card">
+            <a href="#progress" data-open="progress">
+            <div class="kicker">
+                <div class="icon" aria-hidden="true">📈</div>
+                <span class="pill">Tracking</span>
+            </div>
+            <h3 class="title">Progress & Metrics</h3>
+            <p class="desc">Bodyweight, waist, photos, BIA trend tracking (no panic mode).</p>
+            <div class="cta">Open →</div>
+            </a>
+        </article>
+
+        <article class="card">
+            <a href="#damage" data-open="damage">
+            <div class="kicker">
+                <div class="icon" aria-hidden="true">🧯</div>
+                <span class="pill">Reset</span>
+            </div>
+            <h3 class="title">Damage Control Protocol</h3>
+            <p class="desc">Fast recovery playbook after pizza/gummies/junk days.</p>
+            <div class="cta">Open →</div>
+            </a>
+        </article>
+
+        <article class="card">
+            <a href="#bulk" data-open="bulk">
+            <div class="kicker">
+                <div class="icon" aria-hidden="true">🚀</div>
+                <span class="pill">Next phase</span>
+            </div>
+            <h3 class="title">Clean Bulk Phase</h3>
+            <p class="desc">Switch trigger + how to bulk with minimal fat gain.</p>
+            <div class="cta">Open →</div>
+            </a>
+        </article>
+
+        <article class="card">
+            <a href="#groceries" data-open="groceries">
+            <div class="kicker">
+                <div class="icon" aria-hidden="true">🛒</div>
+                <span class="pill">Food</span>
+            </div>
+            <h3 class="title">Grocery List & “Free Foods”</h3>
+            <p class="desc">Low-cal volume foods + shopping checklist for compliance.</p>
+            <div class="cta">Open →</div>
+            </a>
+        </article>
+
+        <article class="card">
+            <a href="#templates" data-open="templates">
+            <div class="kicker">
+                <div class="icon" aria-hidden="true">✅</div>
+                <span class="pill">Tools</span>
+            </div>
+            <h3 class="title">Templates</h3>
+            <p class="desc">Daily checklist, weekly review, and quick meal builder.</p>
+            <div class="cta">Open →</div>
+            </a>
+        </article>
+
+        <article class="card">
+            <a href="#notes" data-open="notes">
+            <div class="kicker">
+                <div class="icon" aria-hidden="true">🗒️</div>
+                <span class="pill">Journal</span>
+            </div>
+            <h3 class="title">Notes & Observations</h3>
+            <p class="desc">Energy, sleep, cravings, training performance; quick log.</p>
+            <div class="cta">Open →</div>
+            </a>
+        </article>
+        -->
         </section>
 
-        <hr>
-
-        <section>
-            <h2>💥 Day 3 - Back &amp; Biceps (Pull A)</h2>
-            <ul>
-                <li>Weighted Pull-Ups (mixed grips) - 4x6</li>
-                <li>Barbell Rows - 4x8</li>
-                <li>Dumbbell Rows (Paused, Full ROM) - 3x12</li>
-                <li>Bodyweight Rows - 3x10</li>
-                <li>Incline DB Curls - 4x10</li>
-                <li>Zottman Curls - 3x10</li>
-                <li>Cross-Body Hammer Curls - 3x10</li>
-                <li>Pronated Curls (EZ or DB) - 3x8-10</li>
-            </ul>
-
-            <h3>🔥 Extra Mile (Optional)</h3>
-            <ul>
-                <li>Barbell Shrugs - 3x15</li>
-                <li>Reverse Curls - 3x12 (forearm focus)</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section>
-            <h2>💥 Day 4 - Chest &amp; Arms (Push B)</h2>
-            <ul>
-                <li>Incline Barbell Press - 4x6-8</li>
-                <li>Dumbbell Press (Flat) - 4x8</li>
-                <li>One-Arm Cable Chest Fly (low to high) - 4x12/side</li>
-                <li>Close-Grip Bench Press - 4x8</li>
-                <li>Overhead DB Triceps Extension - 4x10</li>
-                <li>Skull Crushers (DB or EZ) - 4x10</li>
-                <li>DB Cross-Body Curls - 4x12</li>
-                <li>Concentration Curls - 4x10</li>
-                <li>Reverse Curls - 4x12</li>
-            </ul>
-
-            <h3>🔥 Extra Mile (Optional)</h3>
-            <ul>
-                <li>Push-Ups to Failure + Barbell Drag Curls - 3xAMRAP</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section>
-            <h2>💥 Day 5 - Posterior Chain &amp; Core (Legs B + Abs)</h2>
-            <ul>
-                <li>Deadlifts (Strength) - 4x5</li>
-                <li>Romanian Deadlifts (DB or BB) - 4x10</li>
-                <li>Back Squats (High Volume) - 4x12</li>
-                <li>Hip Thrusts (Heavy) - 4x10</li>
-                <li>Hanging Leg Raises - 4x12</li>
-                <li>Landmine 180s - 3x10</li>
-                <li>Incline Weighted Sit-Ups - 3x12</li>
-            </ul>
-
-            <h3>🔥 Extra Mile (Optional)</h3>
-            <ul>
-                <li>Glute Kickbacks (band or cable) - 3x15/side</li>
-                <li>Landmine Reverse Lunges - 3x8/leg</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section>
-            <h2>💥 Day 6 (Optional Volume / Weak Points)</h2>
-            <ul>
-                <li>Focus on: Glutes, hamstrings, forearms, calves, arms or cardio</li>
-                <li>Choose 3-5 movements based on what’s lagging</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section>
-            <h2>🧠 Notes</h2>
-            <ul>
-                <li>Glutes, hamstrings, and abs are trained 2x/week</li>
-                <li>Arms are hit directly 2x and indirectly 4x</li>
-                <li>Shoulders get balanced front/side/rear work</li>
-                <li>Volume is high but recoverable</li>
-                <li>You can rotate Days 3 &amp; 4 to avoid push-pull-push</li>
-            </ul>
-        </section>
-
-</div>
-
-<!-- Dark Mode Script -->
-<script>
-const body = document.body;
-const btn = document.getElementById("themeToggle");
-
-// If user has a saved preference
-const savedTheme = localStorage.getItem("theme");
-
-if (!savedTheme || savedTheme === "dark") {
-    body.classList.add("dark");
-    btn.textContent = "☀️ Light Mode";
-} else {
-    btn.textContent = "🌙 Dark Mode";
-}
-
-btn.addEventListener("click", () => {
-    body.classList.toggle("dark");
-
-    if (body.classList.contains("dark")) {
-        localStorage.setItem("theme", "dark");
-        btn.textContent = "☀️ Light Mode";
-    } else {
-        localStorage.setItem("theme", "light");
-        btn.textContent = "🌙 Dark Mode";
-    }
-});
-</script>
+        <footer>
+        Personal Fitness center <span class="linklike">#fitness</span>.
+        </footer>
+    </main>
 
 
-</body>
+    <dialog id="modal">
+        <div class="modal-head">
+        <h3 id="modalTitle">Title</h3>
+        <button class="btn" id="closeBtn" type="button">✕ Close</button>
+        </div>
+        <div class="modal-body">
+        <p id="modalText">Content placeholder.</p>
+        <p class="muted"></p>
+        </div>
+        <div class="modal-actions">
+        <button class="btn primary" id="modalOk" type="button">Got it</button>
+        </div>
+    </dialog>
+
+    <script>
+        (function () {
+        const root = document.body;
+        const themeBtn = document.getElementById("themeBtn");
+        const homeBtn = document.getElementById("homeBtn");
+
+        const modal = document.getElementById("modal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalText = document.getElementById("modalText");
+        const closeBtn = document.getElementById("closeBtn");
+        const modalOk = document.getElementById("modalOk");
+
+        // Default = dark. Apply saved preference if exists.
+        const saved = localStorage.getItem("fitness_theme");
+        if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+        else root.setAttribute("data-theme", "dark");
+
+        function syncThemeUI() {
+            const theme = root.getAttribute("data-theme");
+            const isDark = theme === "dark";
+            themeBtn.setAttribute("aria-pressed", String(isDark));
+            themeBtn.innerHTML = (isDark ? "🌙" : "☀️") + ' <span id="themeText">' + (isDark ? "Dark" : "Light") + "</span>";
+        }
+        syncThemeUI();
+
+        themeBtn.addEventListener("click", () => {
+            const current = root.getAttribute("data-theme");
+            const next = current === "dark" ? "light" : "dark";
+            root.setAttribute("data-theme", next);
+            localStorage.setItem("fitness_theme", next);
+            syncThemeUI();
+        });
+
+        homeBtn.addEventListener("click", () => {
+            //document.getElementById("home").scrollIntoView({ behavior: "smooth", block: "start" });
+            window.location.href = "/";
+        });
+
+        // Optional: open a minimal modal instead of navigating
+        const copy = {
+            "ultra-beast": {
+            title: "Ultra Beast Recomp Regime",
+            text: "Your main daily schedule: meals + supplements for training days and rest days."
+            },
+            "training": {
+            title: "Training Split",
+            text: "Weekly lifting structure. Add links or paste your routine details here."
+            },
+            "supps": {
+            title: "Supplements & Timing",
+            text: "Electrolytes, creatine, collagen — timing rules and dosing caps."
+            },
+            "progress": {
+            title: "Progress & Metrics",
+            text: "Track waist + weight trends. Use BIA as a trend tool, not a truth scan."
+            },
+            "damage": {
+            title: "Damage Control Protocol",
+            text: "Fast reset after junk days: hydration, steps, protein, and calm consistency."
+            },
+            "bulk": {
+            title: "Clean Bulk Phase",
+            text: "Switch trigger + clean bulk outline to gain muscle with minimal fat gain."
+            },
+            "groceries": {
+            title: "Grocery List & Free Foods",
+            text: "Volume foods + shopping checklist to keep compliance easy."
+            },
+            "templates": {
+            title: "Templates",
+            text: "Daily checklist + weekly review + quick meal builder templates."
+            },
+            "notes": {
+            title: "Notes & Observations",
+            text: "Short daily log: sleep, energy, cravings, training performance."
+            }
+        };
+
+        // Click handlers: show modal (you can remove this section if you want real navigation)
+        document.querySelectorAll('[data-open]').forEach((link) => {
+            link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const key = link.getAttribute("data-open");
+            const data = copy[key] || { title: "Section", text: "Add content or link this card to a page." };
+            modalTitle.textContent = data.title;
+            modalText.textContent = data.text;
+            if (typeof modal.showModal === "function") modal.showModal();
+            });
+        });
+
+        function closeModal() { if (modal.open) modal.close(); }
+        closeBtn.addEventListener("click", closeModal);
+        modalOk.addEventListener("click", closeModal);
+        modal.addEventListener("click", (e) => {
+            const rect = modal.getBoundingClientRect();
+            const inDialog =
+            rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+            rect.left <= e.clientX && e.clientX <= rect.left + rect.width;
+            if (!inDialog) closeModal();
+        });
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeModal();
+        });
+        })();
+    </script>
+    </body>
 </html>
